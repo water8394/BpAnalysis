@@ -1,5 +1,94 @@
+import math
 import numpy as np
 import pandas as pd
+
+"""
+寻找一个列表或者dataframe的最大值
+"""
+def find_max(data):
+    m = -1
+    for n in data:
+        if math.isnan(n):
+            pass
+        else:
+            m = n if n-m>0 else m
+    return m
+
+"""
+计算一个列表或者dataframe的均值
+"""
+def find_mean(data):
+    m = 0;
+    for n in data:
+        if not math.isnan(n):
+            m += n
+    return m/len(data)
+
+
+
+"""
+寻找一个列表或者dataframe的最小值
+"""
+def find_min(data):
+    m = 1
+    for n in data:
+        if math.isnan(n):
+            pass
+        else:
+            m = m if n - m > 0 else n
+    return m
+
+"""
+归一化一个片段
+"""
+def regular(part, data, vally, diff):
+    reg_part = data[part[0]:part[1]]
+    real_diff = find_max(reg_part) - find_min(reg_part)
+    ind = diff / real_diff
+    reg_part = [_*ind for _ in reg_part]
+
+    f = vally - find_min(reg_part)
+    reg_part = [_ + f for _ in reg_part]
+
+    return reg_part
+
+
+"""
+归一化一组数据
+
+"""
+
+def baseline(data):
+    data = data.rolling(window=15).mean()
+    mean = data.mean()
+    mean_value = [mean for _ in data]
+
+
+    # 寻找峰值
+    peek_idx = find_peek(data)
+    peeks = [data[idx] for idx in peek_idx]
+
+    # 寻找谷值
+    valley_value = [mean+(mean-_) for _ in data]
+    vally_idx = find_peek(valley_value)
+    vallys = [data[idx] for idx in vally_idx]
+
+
+    # 寻找峰值基线,谷值基线
+    peek_baseline = find_mean(peeks)
+    peek_baseline = [peek_baseline for _ in data]
+    vally_baseline = find_mean(vallys)
+    vally_baseline = [vally_baseline for _ in data]
+
+    # 构建片段 列表
+    vally_part = []
+    for i in range(len(vally_idx)-1):
+        vally_part.append((vally_idx[i], vally_idx[i+1]))
+    new_ir = []
+    for i in range(len(vally_part)):
+        new_ir += regular(vally_part[i],data,vally_baseline[0], peek_baseline[0]-vally_baseline[0])
+
+    return new_ir
 
 """
 寻找单路数据的峰值
@@ -8,7 +97,7 @@ def find_peek(data):
     # find one serials peeks
     amplitude = 0.6
     peek_list = []
-    max_value = data.max()
+    max_value = find_max(data)
     threshold = amplitude * max_value
     for i in range(2, len(data) - 2):
 
