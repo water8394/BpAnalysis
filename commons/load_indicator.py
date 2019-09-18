@@ -1,5 +1,7 @@
 import pymysql
 import pandas as pd
+import numpy as np
+
 def load():
     df = pd.DataFrame(columns=['t','ptt', 'vally_ptt', 'rr1', 'rr2', 'sum1', 'up1', 'down1', 'sum2', 'up2', 'down2','high_pluse_1','high_pluse_2','low_pluse_1','low_pluse_2'])
     conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', password='root', db='plusewave_info', charset='utf8')
@@ -31,6 +33,17 @@ def load():
     df['low_pluse'] = [float(_)/2 for _ in low]
     return df
 
+# 将预测结果写入sql
+def write_to_table(t, predictValue):
+    conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', password='root', db='plusewave_info',
+                           charset='utf8')
+    cursor = conn.cursor()
+    value = predictValue.astype(np.str_)
+    sql = "update predict set low=" + value + " where time= '%s'" % t
+    print(sql)
+    cursor.execute(sql)
+    conn.commit()
+    conn.close()
 
 
 if __name__ == '__main__':

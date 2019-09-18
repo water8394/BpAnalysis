@@ -37,7 +37,7 @@ def filter(table):
     table.ir1 = table.ir1.rolling(window=30).mean()
     table.ir2 = table.ir2.rolling(window=30).mean()
     table.red1 = table.red1.rolling(window=30).mean().rolling(window=30).mean()
-    table.red2 = table.red2.rolling(window=30).mean()
+    table.red2 = table.red2.rolling(window=30).mean().rolling(window=30).mean()
     table = table[120:]
     ################################################
     # 反转波形
@@ -85,7 +85,7 @@ if __name__ == '__main__':
     ###################################################################
     # 结果数据
     fig2 = plt.subplot(111)
-    plt.plot(df.red1, c='r')
+    plt.plot(df.red2, c='b')
     # plt.plot(df.red2, c='r')
     plt.xlabel('Time(s)', fontsize=18)
     plt.ylabel('Amptitude', fontsize=18)
