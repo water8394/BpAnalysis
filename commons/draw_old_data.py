@@ -2,6 +2,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
+"""
+绘制excel中的数据波形
+
+
+"""
+
 if __name__ == '__main__':
 
     df = pd.read_excel("../old/data_regular/1_6_16_41.xlsx")

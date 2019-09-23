@@ -3,6 +3,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
+"""
+绘制 测量血压和估算血压的值 SBP和DBP在同一张图中表示
+
+"""
+
 if __name__ == '__main__':
     conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', password='root', db='plusewave_info',
                            charset='utf8')
