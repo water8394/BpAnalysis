@@ -63,19 +63,19 @@ def filter(table):
 if __name__ == '__main__':
     df = pd.read_table('../new_sensor/raw/14_50_02.txt', sep=',', header=None)
     df.columns = ['red1', 'ir1', 'red2', 'ir2']
-    df = df[50:]
+    df = df[50:len(df)//2-1]
     df.reset_index(drop=True, inplace=True)
     ###################################################################
     # 原始数据
-    # plt.figure()
-    # fig1 = plt.subplot(211)
-    # plt.plot(df.ir1, c='b')
-    # plt.xlabel('Time(s)',fontsize=18)
-    # plt.ylabel('Amptitude',fontsize=18)
-    # x_ticks = [x for x in range(len(df.ir1)) if x % 400 == 0]
-    # fig1.set_xticks(x_ticks)
-    # fig1.set_xticklabels([x//400 for x in x_ticks],fontsize=15)
-    # plt.title('Raw PluseWave',fontsize=20)
+    plt.figure()
+    fig1 = plt.subplot(211)
+    plt.plot(df.ir1, c='b')
+    plt.xlabel('Time (s)', fontsize=18)
+    plt.ylabel('Amplitude', fontsize=18)
+    x_ticks = [x for x in range(len(df.ir1)) if x % 400 == 0]
+    fig1.set_xticks(x_ticks)
+    fig1.set_xticklabels([x // 400 for x in x_ticks], fontsize=15)
+    plt.title('Raw PPG signal', fontsize=20)
 
     ###################################################################
 
@@ -84,15 +84,15 @@ if __name__ == '__main__':
     df = filter(df)
     ###################################################################
     # 结果数据
-    fig2 = plt.subplot(111)
-    plt.plot(df.red2, c='b')
+    fig2 = plt.subplot(212)
+    plt.plot(df.red2, c='r')
     # plt.plot(df.red2, c='r')
-    plt.xlabel('Time(s)', fontsize=18)
-    plt.ylabel('Amptitude', fontsize=18)
+    plt.xlabel('Time (s)', fontsize=18)
+    plt.ylabel('Amplitude', fontsize=18)
     x_ticks = [x for x in range(len(df.ir2)) if x % 400 == 0]
     fig2.set_xticks(x_ticks)
     fig2.set_xticklabels([x // 400 for x in x_ticks], fontsize=15)
-    plt.title('After Pre-process PluseWave', fontsize=20)
+    plt.title('Pre-process PPG signal', fontsize=20)
     plt.subplots_adjust(wspace=0, hspace=0.5)
     plt.show()
     ###################################################################
