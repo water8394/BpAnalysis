@@ -2,245 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="004db797-5a38-4148-b93d-3f110a5f9aeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/calculate/task.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/draw_different_predict_and_raw.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/draw_old_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/predict_value.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/wavelet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commons/paper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/clean_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/data_comparison.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/draw_picture.py" beforeDir="false" afterPath="$PROJECT_DIR$/commons/draw_picture.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/plot_wave.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/pre_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/commons/pre_process.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/re_filter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-bak/20_53_21.txt" beforeDir="false" afterPath="$PROJECT_DIR$/old/data-bak/20_53_21.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-bak/temporary_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data-bak/temporary_data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/01_08_17_55.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/01_08_17_55.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/01_08_17_59.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/01_08_17_59.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/01_08_18_02.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/01_08_18_02.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/01_10_11_18.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/01_10_11_18.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/01_10_11_21.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/01_10_11_21.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/01_10_11_23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/01_10_11_23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/01_11_10_10.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/01_11_10_10.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/01_11_10_16.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/01_11_10_16.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/01_11_10_19.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/01_11_10_19.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_13_35.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_13_35.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_13_42.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_13_42.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_13_46.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_13_46.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_13_50.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_13_50.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_13_53.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_13_53.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_13_57.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_13_57.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_14_00.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_14_00.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_14_05.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_14_05.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_14_08.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_14_08.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_14_13.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_14_13.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_14_22.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_14_22.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_14_25.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_14_25.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_14_28.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_14_28.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_14_32.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_14_32.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_14_36.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_14_36.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_14_40.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_14_40.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_14_44.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_14_44.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_14_47.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_14_47.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_14_51.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_14_51.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_16_14_54.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_16_14_54.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_17_19_07.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_17_19_07.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_17_19_11.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_17_19_11.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_17_19_14.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_17_19_14.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_17_19_16.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_17_19_16.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_17_19_20.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_17_19_20.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_17_19_23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_17_19_23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_17_19_26.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_17_19_26.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_17_19_28.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_17_19_28.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_17_19_30.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_17_19_30.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_17_19_33.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_17_19_33.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_25_21_37.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_25_21_37.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_25_21_41.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_25_21_41.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_25_21_44.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_25_21_44.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_25_21_56.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_25_21_56.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_25_21_59.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_25_21_59.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_25_22_03.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_25_22_03.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_25_22_08.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_25_22_08.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_25_22_09.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_25_22_09.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_26_14_48.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_26_14_48.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_26_14_54.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_26_14_54.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_26_15_07.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_26_15_07.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_26_15_11.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_26_15_11.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_26_15_14.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_26_15_14.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_26_20_23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_26_20_23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_26_20_26.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_26_20_26.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_26_20_30.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_26_20_30.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_30_20_44.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_30_20_44.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/12_30_20_53.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/12_30_20_53.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_16_19.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_16_19.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_16_23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_16_23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_16_26.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_16_26.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_16_39.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_16_39.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_16_41.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_16_41.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_16_44.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_16_44.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_16_51.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_16_51.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_16_54.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_16_54.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_16_57.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_16_57.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_17_05.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_17_05.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_17_09.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_17_09.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_17_12.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_17_12.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_17_23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_17_23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_17_26.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_17_26.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_17_29.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_17_29.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_18_08.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_18_08.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_18_12.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_18_12.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_after/1_6_18_15.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_after/1_6_18_15.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_25_21_37.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_25_21_37.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_25_21_41.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_25_21_41.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_25_21_44.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_25_21_44.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_25_21_56.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_25_21_56.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_25_21_59.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_25_21_59.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_25_22_3.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_25_22_3.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_25_22_8.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_25_22_8.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_25_22_9.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_25_22_9.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_26_14_48.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_26_14_48.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_26_14_54.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_26_14_54.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_26_15_11.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_26_15_11.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_26_15_14.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_26_15_14.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_26_15_7.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_26_15_7.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_26_20_23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_26_20_23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_26_20_26.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_26_20_26.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_26_20_30.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_26_20_30.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_30_20_44.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_30_20_44.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/12_30_20_53.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/12_30_20_53.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_10_11_18.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_10_11_18.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_10_11_21.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_10_11_21.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_10_11_23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_10_11_23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_11_10_10.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_11_10_10.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_11_10_16.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_11_10_16.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_11_10_19.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_11_10_19.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_16_19.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_16_19.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_16_23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_16_23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_16_26.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_16_26.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_16_39.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_16_39.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_16_41.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_16_41.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_16_44.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_16_44.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_16_51.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_16_51.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_16_54.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_16_54.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_16_57.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_16_57.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_17_05.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_17_05.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_17_09.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_17_09.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_17_12.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_17_12.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_17_23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_17_23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_17_26.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_17_26.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_17_29.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_17_29.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_18_08.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_18_08.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_18_12.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_18_12.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_6_18_15.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_6_18_15.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_8_17_55.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_8_17_55.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_8_17_59.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_8_17_59.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/1_8_18_02.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/1_8_18_02.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-13.35.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-13.35.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-13.42.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-13.42.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-13.46.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-13.46.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-13.50.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-13.50.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-13.53.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-13.53.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-13.57.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-13.57.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-14.0.xls" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-14.0.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-14.13.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-14.13.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-14.22.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-14.22.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-14.25.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-14.25.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-14.28.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-14.28.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-14.32.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-14.32.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-14.36.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-14.36.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-14.40.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-14.40.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-14.44.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-14.44.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-14.47.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-14.47.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-14.5.xls" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-14.5.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-14.51.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-14.51.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-14.54.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-14.54.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-16-14.8.xls" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-16-14.8.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-17 19.07.xls" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-17 19.07.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-17 19.11.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-17 19.11.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-17 19.14.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-17 19.14.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-17 19.16.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-17 19.16.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-17 19.20.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-17 19.20.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-17 19.23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-17 19.23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-17 19.26.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-17 19.26.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-17 19.28.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-17 19.28.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-17 19.30.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-17 19.30.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_raw/2018-12-17 19.33.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_raw/2018-12-17 19.33.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/01_08_17_55.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/01_08_17_55.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/01_08_17_59.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/01_08_17_59.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/01_08_18_02.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/01_08_18_02.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/01_10_11_18.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/01_10_11_18.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/01_10_11_21.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/01_10_11_21.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/01_10_11_23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/01_10_11_23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/01_11_10_10.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/01_11_10_10.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/01_11_10_16.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/01_11_10_16.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/01_11_10_19.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/01_11_10_19.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_13_35.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_13_35.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_13_42.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_13_42.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_13_46.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_13_46.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_13_50.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_13_50.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_13_53.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_13_53.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_13_57.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_13_57.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_14_00.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_14_00.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_14_05.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_14_05.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_14_08.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_14_08.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_14_13.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_14_13.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_14_22.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_14_22.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_14_25.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_14_25.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_14_28.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_14_28.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_14_32.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_14_32.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_14_36.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_14_36.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_14_40.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_14_40.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_14_44.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_14_44.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_14_47.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_14_47.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_14_51.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_14_51.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_16_14_54.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_16_14_54.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_17_19_07.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_17_19_07.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_17_19_11.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_17_19_11.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_17_19_14.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_17_19_14.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_17_19_16.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_17_19_16.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_17_19_20.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_17_19_20.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_17_19_23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_17_19_23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_17_19_26.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_17_19_26.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_17_19_28.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_17_19_28.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_17_19_30.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_17_19_30.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_17_19_33.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_17_19_33.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_25_21_37.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_25_21_37.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_25_21_41.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_25_21_41.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_25_21_44.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_25_21_44.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_25_21_56.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_25_21_56.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_25_21_59.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_25_21_59.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_25_22_03.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_25_22_03.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_25_22_08.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_25_22_08.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_25_22_09.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_25_22_09.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_26_14_48.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_26_14_48.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_26_14_54.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_26_14_54.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_26_15_07.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_26_15_07.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_26_15_11.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_26_15_11.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_26_15_14.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_26_15_14.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_26_20_23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_26_20_23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_26_20_26.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_26_20_26.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_26_20_30.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_26_20_30.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_30_20_44.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_30_20_44.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/12_30_20_53.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/12_30_20_53.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_16_19.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_16_19.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_16_23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_16_23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_16_26.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_16_26.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_16_39.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_16_39.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_16_41.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_16_41.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_16_44.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_16_44.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_16_51.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_16_51.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_16_54.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_16_54.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_16_57.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_16_57.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_17_05.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_17_05.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_17_09.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_17_09.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_17_12.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_17_12.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_17_23.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_17_23.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_17_26.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_17_26.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_17_29.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_17_29.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_18_08.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_18_08.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_18_12.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_18_12.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_regular/1_6_18_15.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/old/data_regular/1_6_18_15.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commons/wavelet.py" beforeDir="false" afterPath="$PROJECT_DIR$/commons/wavelet.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -265,22 +29,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commons/draw_picture.py">
+        <entry file="file://$PROJECT_DIR$/calculate/moudle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/commons/pre_process.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="87" column="28" lean-forward="true" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+            <state relative-caret-position="114">
+              <caret line="17" selection-start-line="17" selection-end-line="23" selection-end-column="30" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -289,13 +41,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commons/draw_different_predict_and_raw.py">
+        <entry file="file://$PROJECT_DIR$/commons/predict_value.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+            <state relative-caret-position="399">
+              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/commons/paper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commons/wavelet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -328,25 +101,28 @@
         <option value="$PROJECT_DIR$/commons/re_filter.py" />
         <option value="$PROJECT_DIR$/calculate/algorithm.py" />
         <option value="$PROJECT_DIR$/calculate/indicator.py" />
-        <option value="$PROJECT_DIR$/commons/load_indicator.py" />
-        <option value="$PROJECT_DIR$/calculate/moudle.py" />
         <option value="$PROJECT_DIR$/calculate/tensorflowMoudle.py" />
         <option value="$PROJECT_DIR$/commons/data_comparison.py" />
         <option value="$PROJECT_DIR$/commons/plot_wave.py" />
-        <option value="$PROJECT_DIR$/commons/draw_picture.py" />
-        <option value="$PROJECT_DIR$/commons/wavelet.py" />
-        <option value="$PROJECT_DIR$/commons/predict_value.py" />
+        <option value="$PROJECT_DIR$/commons/load_indicator.py" />
+        <option value="$PROJECT_DIR$/calculate/mathIndicator.py" />
         <option value="$PROJECT_DIR$/commons/draw_different_predict_and_raw.py" />
         <option value="$PROJECT_DIR$/commons/draw_old_data.py" />
+        <option value="$PROJECT_DIR$/commons/draw_picture.py" />
+        <option value="$PROJECT_DIR$/commons/predict_value.py" />
+        <option value="$PROJECT_DIR$/calculate/moudle.py" />
+        <option value="$PROJECT_DIR$/commons/draw_error_predict_and_raw.py" />
         <option value="$PROJECT_DIR$/commons/pre_process.py" />
+        <option value="$PROJECT_DIR$/commons/wavelet.py" />
+        <option value="$PROJECT_DIR$/commons/paper.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="455" />
-    <option name="y" value="138" />
+    <option name="x" value="321" />
+    <option name="y" value="124" />
     <option name="width" value="1440" />
-    <option name="height" value="873" />
+    <option name="height" value="849" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -366,18 +142,13 @@
             <path>
               <item name="BpAnalysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="BpAnalysis" type="462c0819:PsiDirectoryNode" />
-              <item name="calculate" type="462c0819:PsiDirectoryNode" />
+              <item name="old" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BpAnalysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="BpAnalysis" type="462c0819:PsiDirectoryNode" />
-              <item name="new_sensor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BpAnalysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BpAnalysis" type="462c0819:PsiDirectoryNode" />
-              <item name="new_sensor" type="462c0819:PsiDirectoryNode" />
-              <item name="raw" type="462c0819:PsiDirectoryNode" />
+              <item name="old" type="462c0819:PsiDirectoryNode" />
+              <item name="data_raw" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -391,20 +162,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowSciView.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/calculate" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/model" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Code\PycharmProjects\BpAnalysis\old" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\PycharmProjects\BpAnalysis\model" />
       <recent name="D:\Code\PycharmProjects\BpAnalysis\calculate" />
       <recent name="D:\Code\PycharmProjects\BpAnalysis\new_sensor\raw" />
       <recent name="D:\Code\PycharmProjects\BpAnalysis\data-bak" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code\PycharmProjects\BpAnalysis\old" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -419,8 +191,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pre_process">
-    <configuration name="draw_different_predict_and_raw" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.paper">
+    <configuration name="draw_error_predict_and_raw" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="BpAnalysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -433,7 +205,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/draw_different_predict_and_raw.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/draw_error_predict_and_raw.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -442,7 +214,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="draw_old_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="moudle" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="BpAnalysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -450,12 +222,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/commons" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/calculate" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/draw_old_data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/calculate/moudle.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -464,7 +236,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="draw_picture" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="paper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="BpAnalysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -477,7 +249,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/draw_picture.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/paper.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -508,7 +280,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="predict_value" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="wavelet" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="BpAnalysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -521,7 +293,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/predict_value.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/wavelet.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -532,11 +304,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.paper" />
+        <item itemvalue="Python.wavelet" />
         <item itemvalue="Python.pre_process" />
-        <item itemvalue="Python.draw_old_data" />
-        <item itemvalue="Python.draw_different_predict_and_raw" />
-        <item itemvalue="Python.predict_value" />
-        <item itemvalue="Python.draw_picture" />
+        <item itemvalue="Python.draw_error_predict_and_raw" />
+        <item itemvalue="Python.moudle" />
       </list>
     </recent_temporary>
   </component>
@@ -561,7 +333,13 @@
       <workItem from="1567169585155" duration="1586000" />
       <workItem from="1567310695227" duration="1935000" />
       <workItem from="1567664704757" duration="25314000" />
-      <workItem from="1568008131147" duration="907000" />
+      <workItem from="1568008131147" duration="952000" />
+      <workItem from="1568199637963" duration="755000" />
+      <workItem from="1568810823857" duration="13139000" />
+      <workItem from="1569250890226" duration="5344000" />
+      <workItem from="1569409201859" duration="1055000" />
+      <workItem from="1573030673335" duration="12037000" />
+      <workItem from="1574948429560" duration="3188000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1555247844792</created>
@@ -584,22 +362,57 @@
       <option name="project" value="LOCAL" />
       <updated>1567666784753</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="更新项目">
+      <created>1568032256963</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568032256963</updated>
+    </task>
+    <task id="LOCAL-00005" summary="更新项目">
+      <created>1568818374864</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568818374864</updated>
+    </task>
+    <task id="LOCAL-00006" summary="更新项目">
+      <created>1569256953611</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569256953611</updated>
+    </task>
+    <task id="LOCAL-00007" summary="更新项目">
+      <created>1569257008769</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569257008769</updated>
+    </task>
+    <task id="LOCAL-00008" summary="更新项目">
+      <created>1569412625272</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569412625272</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69125000" />
+    <option name="totallyTimeSpent" value="104688000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="455" y="138" width="1440" height="873" extended-state="0" />
+    <frame x="321" y="124" width="1440" height="849" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49811321" visible="true" weight="0.21449275" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49811321" visible="true" weight="0.23260869" />
       <window_info id="Structure" order="1" sideWeight="0.5018868" side_tool="true" weight="0.21159421" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286908" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28281462" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991881" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30209792" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3986014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -648,19 +461,33 @@
     <MESSAGE value="更新项目" />
     <option name="LAST_COMMIT_MESSAGE" value="更新项目" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/commons/draw_error_predict_and_raw.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/BpAnalysis$draw_picture.coverage" NAME="draw_picture Coverage Results" MODIFIED="1567668147874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
-    <SUITE FILE_PATH="coverage/BpAnalysis$draw_different_predict_and_raw.coverage" NAME="draw_different_predict_and_raw Coverage Results" MODIFIED="1567868943231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
-    <SUITE FILE_PATH="coverage/BpAnalysis$data_comparison.coverage" NAME="data_comparison Coverage Results" MODIFIED="1557065876094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
-    <SUITE FILE_PATH="coverage/BpAnalysis$plot_wave.coverage" NAME="plot_wave Coverage Results" MODIFIED="1567170013404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
-    <SUITE FILE_PATH="coverage/BpAnalysis$pre_process.coverage" NAME="pre_process Coverage Results" MODIFIED="1568008440485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
-    <SUITE FILE_PATH="coverage/BpAnalysis$load_indicator.coverage" NAME="load_indicator Coverage Results" MODIFIED="1555428555173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
-    <SUITE FILE_PATH="coverage/BpAnalysis$indicator.coverage" NAME="indicator Coverage Results" MODIFIED="1555429066998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/calculate" />
-    <SUITE FILE_PATH="coverage/BpAnalysis$predict_value.coverage" NAME="predict_value Coverage Results" MODIFIED="1567868188337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
-    <SUITE FILE_PATH="coverage/BpAnalysis$moudle.coverage" NAME="moudle Coverage Results" MODIFIED="1557061035208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/calculate" />
+    <SUITE FILE_PATH="coverage/BpAnalysis$draw_picture.coverage" NAME="draw_picture Coverage Results" MODIFIED="1568858953473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
+    <SUITE FILE_PATH="coverage/BpAnalysis$paper.coverage" NAME="paper Coverage Results" MODIFIED="1574951308195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
+    <SUITE FILE_PATH="coverage/BpAnalysis$pre_process.coverage" NAME="pre_process Coverage Results" MODIFIED="1569409617074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
+    <SUITE FILE_PATH="coverage/BpAnalysis$draw_error_predict_and_raw.coverage" NAME="draw_error_predict_and_raw Coverage Results" MODIFIED="1569256378898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
     <SUITE FILE_PATH="coverage/BpAnalysis$tensorflowMoudle.coverage" NAME="tensorflowMoudle Coverage Results" MODIFIED="1557064063096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/calculate" />
+    <SUITE FILE_PATH="coverage/BpAnalysis$moudle.coverage" NAME="moudle Coverage Results" MODIFIED="1569254245214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/calculate" />
     <SUITE FILE_PATH="coverage/BpAnalysis$re_filter.coverage" NAME="re_filter Coverage Results" MODIFIED="1555340457838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
     <SUITE FILE_PATH="coverage/BpAnalysis$draw_old_data.coverage" NAME="draw_old_data Coverage Results" MODIFIED="1568007798749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
+    <SUITE FILE_PATH="coverage/BpAnalysis$draw_different_predict_and_raw.coverage" NAME="draw_different_predict_and_raw Coverage Results" MODIFIED="1569252877560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
+    <SUITE FILE_PATH="coverage/BpAnalysis$data_comparison.coverage" NAME="data_comparison Coverage Results" MODIFIED="1557065876094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
+    <SUITE FILE_PATH="coverage/BpAnalysis$plot_wave.coverage" NAME="plot_wave Coverage Results" MODIFIED="1567170013404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
+    <SUITE FILE_PATH="coverage/BpAnalysis$wavelet.coverage" NAME="wavelet Coverage Results" MODIFIED="1573044582876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
+    <SUITE FILE_PATH="coverage/BpAnalysis$indicator.coverage" NAME="indicator Coverage Results" MODIFIED="1555429066998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/calculate" />
+    <SUITE FILE_PATH="coverage/BpAnalysis$load_indicator.coverage" NAME="load_indicator Coverage Results" MODIFIED="1568813105472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
+    <SUITE FILE_PATH="coverage/BpAnalysis$predict_value.coverage" NAME="predict_value Coverage Results" MODIFIED="1569254095107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://D:/Program Files/Anaconda/Lib/random.py">
@@ -691,19 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/calculate/algorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
-          <folding>
-            <element signature="e#83#787#0" />
-            <element signature="e#867#2317#0" />
-            <element signature="e#2367#2525#0" />
-            <element signature="e#2569#3741#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/calculate/tensorflowMoudle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -718,66 +532,10 @@
     <entry file="file://$PROJECT_DIR$/commons/re_filter.py" />
     <entry file="file://$PROJECT_DIR$/commons/data_comparison.py" />
     <entry file="file://$PROJECT_DIR$/commons/clean_data.py" />
-    <entry file="file://$PROJECT_DIR$/commons/display.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commons/wavelet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commons/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/commons/rename_file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/calculate/moudle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commons/load_indicator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commons/predict_value.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -791,40 +549,131 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commons/draw_picture.py">
+    <entry file="file://D:/Program Files/Anaconda/Lib/site-packages/sklearn/model_selection/_split.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="236">
+          <caret line="2072" column="4" selection-start-line="2072" selection-start-column="4" selection-end-line="2072" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="45" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commons/draw_different_predict_and_raw.py">
+    <entry file="file://$PROJECT_DIR$/commons/load_indicator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        <state relative-caret-position="242">
+          <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commons/draw_old_data.py">
+    <entry file="file://$PROJECT_DIR$/calculate/algorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+        <state relative-caret-position="437">
+          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+          <folding>
+            <element signature="e#83#787#0" />
+            <element signature="e#867#2317#0" />
+            <element signature="e#2367#2525#0" />
+            <element signature="e#2569#3741#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculate/mathIndicator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/draw_different_predict_and_raw.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/display.py" />
+    <entry file="file://$PROJECT_DIR$/commons/draw_error_predict_and_raw.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/commons/draw_old_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/show the result.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/commons/pre_process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="87" column="28" lean-forward="true" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+        <state relative-caret-position="-684">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/base wavelet.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/remove baseline.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculate/moudle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="17" selection-start-line="17" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/predict_value.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/wavelet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/paper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
