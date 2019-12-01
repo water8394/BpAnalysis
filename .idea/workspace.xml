@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="004db797-5a38-4148-b93d-3f110a5f9aeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ga_xgboosts/MyProblem.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ga_xgboosts/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BpAnalysis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BpAnalysis.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ga_xgboosts/Result/res.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ga_xgboosts/MyProblem.py" beforeDir="false" afterPath="$PROJECT_DIR$/ga_xgboosts/MyProblem.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,12 +27,12 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ga_xgboosts/MyProblem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="43">
+              <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
               <folding>
                 <element signature="e#24#42#0" expanded="true" />
               </folding>
@@ -42,10 +41,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/Program Files/Anaconda/Lib/site-packages/xgboost/sklearn.py">
+        <entry file="file://$PROJECT_DIR$/ga_xgboosts/result1.svg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ga_xgboosts/Result/res.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="908" column="18" selection-start-line="908" selection-start-column="8" selection-end-line="908" selection-end-column="18" />
+            <state relative-caret-position="228">
+              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -53,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calculate/moudle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="-342">
+              <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -103,10 +107,11 @@
         <option value="$PROJECT_DIR$/commons/paper.py" />
         <option value="$PROJECT_DIR$/ga_xgboosts/ga.py" />
         <option value="$PROJECT_DIR$/ga_xgboosts/MyProblem.py" />
+        <option value="$PROJECT_DIR$/ga_xgboosts/Result/res.txt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="189" />
     <option name="y" value="86" />
     <option name="width" value="1440" />
@@ -136,6 +141,17 @@
               <item name="BpAnalysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="BpAnalysis" type="462c0819:PsiDirectoryNode" />
               <item name="ga_xgboosts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BpAnalysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BpAnalysis" type="462c0819:PsiDirectoryNode" />
+              <item name="ga_xgboosts" type="462c0819:PsiDirectoryNode" />
+              <item name="Result" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BpAnalysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BpAnalysis" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -178,7 +194,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.paper">
+  <component name="RunManager" selected="Python.MyProblem">
+    <configuration name="MyProblem" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="BpAnalysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ga_xgboosts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ga_xgboosts/MyProblem.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="draw_error_predict_and_raw" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="BpAnalysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -193,28 +231,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/commons/draw_error_predict_and_raw.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="moudle" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="BpAnalysis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/calculate" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/calculate/moudle.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -291,11 +307,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.MyProblem" />
         <item itemvalue="Python.paper" />
         <item itemvalue="Python.wavelet" />
         <item itemvalue="Python.pre_process" />
         <item itemvalue="Python.draw_error_predict_and_raw" />
-        <item itemvalue="Python.moudle" />
       </list>
     </recent_temporary>
   </component>
@@ -328,7 +344,8 @@
       <workItem from="1573030673335" duration="12037000" />
       <workItem from="1574948429560" duration="3300000" />
       <workItem from="1575175729886" duration="874000" />
-      <workItem from="1575185505396" duration="3742000" />
+      <workItem from="1575185505396" duration="4745000" />
+      <workItem from="1575197891050" duration="9130000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1555247844792</created>
@@ -393,22 +410,28 @@
       <option name="project" value="LOCAL" />
       <updated>1574997090865</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="更新项目">
+      <created>1575196663489</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575196663490</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109416000" />
+    <option name="totallyTimeSpent" value="119549000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="189" y="86" width="1440" height="849" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49811321" visible="true" weight="0.23985507" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49811321" visible="true" weight="0.17910448" />
       <window_info id="Structure" order="1" sideWeight="0.5018868" side_tool="true" weight="0.21159421" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286908" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30209792" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34871244" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -478,6 +501,7 @@
     <SUITE FILE_PATH="coverage/BpAnalysis$moudle.coverage" NAME="moudle Coverage Results" MODIFIED="1569254245214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/calculate" />
     <SUITE FILE_PATH="coverage/BpAnalysis$re_filter.coverage" NAME="re_filter Coverage Results" MODIFIED="1555340457838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
     <SUITE FILE_PATH="coverage/BpAnalysis$draw_old_data.coverage" NAME="draw_old_data Coverage Results" MODIFIED="1568007798749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
+    <SUITE FILE_PATH="coverage/BpAnalysis$MyProblem.coverage" NAME="MyProblem Coverage Results" MODIFIED="1575206646278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ga_xgboosts" />
     <SUITE FILE_PATH="coverage/BpAnalysis$draw_different_predict_and_raw.coverage" NAME="draw_different_predict_and_raw Coverage Results" MODIFIED="1569252877560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
     <SUITE FILE_PATH="coverage/BpAnalysis$data_comparison.coverage" NAME="data_comparison Coverage Results" MODIFIED="1557065876094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
     <SUITE FILE_PATH="coverage/BpAnalysis$plot_wave.coverage" NAME="plot_wave Coverage Results" MODIFIED="1567170013404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/commons" />
@@ -630,16 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commons/load_indicator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/commons/wavelet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
@@ -667,16 +681,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ga_xgboosts/ga.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/calculate/moudle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ga_xgboosts/ga.py" />
     <entry file="file://D:/Program Files/Anaconda/Lib/site-packages/xgboost/sklearn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -684,10 +689,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Program Files/Anaconda/Lib/site-packages/pymysql/connections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="582" selection-start-line="582" selection-end-line="582" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/load_indicator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculate/moudle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ga_xgboosts/Result/CV.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1681" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ga_xgboosts/Result/FitnV.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ga_xgboosts/Result/ObjV.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1681" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ga_xgboosts/result1.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ga_xgboosts/Result/res.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ga_xgboosts/MyProblem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="43">
+          <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
           <folding>
             <element signature="e#24#42#0" expanded="true" />
           </folding>
