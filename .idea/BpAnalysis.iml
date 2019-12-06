@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/calculate" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/commons" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ga_xgboosts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/scene" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
