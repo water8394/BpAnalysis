@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
-import numpy as np
+from calculate import *
 import geatpy as ea
 import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from commons.load_indicator import load
 from sklearn.metrics import mean_absolute_error
-
 
 
 
