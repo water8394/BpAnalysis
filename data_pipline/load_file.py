@@ -29,13 +29,27 @@ class SensorData:
 
         return data
 
+    @staticmethod
+    def _combine_path(k):
+        return '../scene/data/' + str(k) + '.txt'
+
     def get_record_number(self):
         return self.record['number']
 
     def load_by_number(self, k):
 
-        path = '../scene/data/' + str(k) + '.txt'
+        path = SensorData._combine_path(k)
         return self.load(path)
+
+    def resave_file(self, k, data):
+        path = SensorData._combine_path(k)
+        with open(path, 'w+') as f:
+            f.seek(0)
+            for i in range(data.shape[0]):
+                line = data.loc[i]
+                line = ','.join(str(_) for _ in line) + '\n'
+                f.writelines(line)
+            f.truncate()
 
 
 if __name__ == '__main__':
@@ -44,5 +58,7 @@ if __name__ == '__main__':
     sensor = SensorData()
     record = sensor.record
     # print(record[record['number'] > 20])
-    print(record)
+    #print(record)
     # print(sensor.get_record_number())
+
+    sensor.resave_file(100, data)
