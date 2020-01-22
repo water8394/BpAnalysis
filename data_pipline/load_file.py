@@ -61,4 +61,4 @@ if __name__ == '__main__':
     #print(record)
     # print(sensor.get_record_number())
 
-    sensor.resave_file(100, data)
+    #sensor.resave_file(100, data)
