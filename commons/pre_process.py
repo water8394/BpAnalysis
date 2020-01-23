@@ -1,19 +1,16 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-
-from wavelet import wavelet_filter
-
-"""
-2019-9-5
-对数据做预处理,过程包括:
-    1. 去除DC分量
-    2. 均值+小波滤波
-    3. 去除基线漂移
-    4. 归一化波形
-"""
-
+from wavelet import *
 
 def remove_dc(table):
+    """
+    2019-9-5
+    对数据做预处理,过程包括:
+        1. 去除DC分量
+        2. 均值+小波滤波
+        3. 去除基线漂移
+        4. 归一化波形
+    """
     # 1. 去除 DC 分量
     min_ir1 = min(table.ir1)
     min_ir2 = min(table.ir2)
@@ -34,15 +31,11 @@ def filter(table):
     # 2. 均值 + 小波滤波
 
     # 均值
-    table.ir1 = table.ir1.rolling(window=30).mean()
-    table.ir2 = table.ir2.rolling(window=30).mean()
-    table.red1 = table.red1.rolling(window=30).mean().rolling(window=30).mean()
-    table.red2 = table.red2.rolling(window=30).mean().rolling(window=30).mean()
-    table = table[120:]
+    table = table.rolling(window=30).mean()
+    table = table[30:]
     ################################################
     # 反转波形
     ir1_max = max(table.ir1)
-    print(ir1_max)
     ir2_max = max(table.ir2)
     red1_max = max(table.red1)
     red2_max = max(table.red2)
@@ -57,17 +50,20 @@ def filter(table):
     red1 = wavelet_filter(red1)
     red2 = wavelet_filter(red2)
 
-    min_table_length = min(min(min(len(ir1), len(ir2)),len(red1)),len(red2))
+    min_table_length = min(min(min(len(ir1), len(ir2)), len(red1)), len(red2))
     ir1 = ir1[0:min_table_length]
     ir2 = ir2[0:min_table_length]
     red1 = red1[0:min_table_length]
     red2 = red2[0:min_table_length]
 
-    table.ir1 = ir1
-    table.ir2 = ir2
-    table.red1 = red1
-    table.red2 = red2
-    return table
+    new_table = pd.DataFrame(columns=['ir1', 'red1', 'ir2', 'red2'])
+
+    new_table.ir1 = ir1
+    new_table.ir2 = ir2
+    new_table.red1 = red1
+    new_table.red2 = red2
+
+    return new_table
 
 
 if __name__ == '__main__':
@@ -77,7 +73,7 @@ if __name__ == '__main__':
     df.reset_index(drop=True, inplace=True)
     ###################################################################
     # 原始数据
-    plt.figure()
+    plt.figure(figsize=(10, 8))
     fig1 = plt.subplot(211)
     plt.plot(df.ir1, c='b')
     plt.xlabel('Time (s)', fontsize=18)

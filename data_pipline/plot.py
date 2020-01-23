@@ -14,6 +14,15 @@ class Plot:
     def show_wave(dataframe, s):
         Plot.show(dataframe[s])
 
+    @staticmethod
+    def figture_update(figture, x_str, y_str, title, index_data):
+        plt.xlabel(x_str, fontsize=12)
+        plt.ylabel(y_str, fontsize=12)
+        x_ticks = [x for x in range(len(index_data)) if x % 400 == 0]
+        figture.set_xticks(x_ticks)
+        figture.set_xticklabels([x // 400 for x in x_ticks], fontsize=10)
+        plt.title(title, fontsize=13)
+
 
 if __name__ == '__main__':
     list = [1, 3, 2, 5, 6, 8, 3, 1]
