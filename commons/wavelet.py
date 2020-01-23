@@ -1,10 +1,13 @@
 import pywt
 
 
-"""
-小波变化 去除基线
-"""
 def wavelet_filter(wave):
+    """
+    小波变化 去除基线
+    """
+    print('data length: ' + str(len(wave)))
+    if len(wave) %2 > 0:
+        wave = wave[:-1]
     sym = pywt.Wavelet('sym6')  # 小波基
     coeffs = pywt.wavedec(wave, sym)
     coeffs[-1] *= 0  # 去除基线漂移
@@ -12,10 +15,12 @@ def wavelet_filter(wave):
     meta = pywt.waverec(coeffs, sym)
     return meta
 
-"""
-小波变化 去除基线, 自定义小波基
-"""
-def wavelet_filter_with_base(wave,base):
+
+def wavelet_filter_with_base(wave, base):
+    """
+    小波变化 去除基线, 自定义小波基
+    """
+
     sym = pywt.Wavelet(base)  # 小波基
     coeffs = pywt.wavedec(wave, sym)
     coeffs[-1] *= 0
@@ -27,10 +32,11 @@ def wavelet_filter_with_base(wave,base):
     meta = pywt.waverec(coeffs, sym)
     return meta
 
-"""
-去除基线漂移
-"""
+
 def remove_baseline(wave):
+    """
+    去除基线漂移
+    """
     sym = pywt.Wavelet('db4')  # 小波基
     coeffs = pywt.wavedec(wave, sym)
     coeffs[0] *= 0

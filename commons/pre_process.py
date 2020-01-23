@@ -1,6 +1,6 @@
-import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
+import pandas as pd
+
 from wavelet import wavelet_filter
 
 """
@@ -52,18 +52,28 @@ def filter(table):
     red2 = [red2_max - _ for _ in table.red2]
     ################################################
     # 小波滤波
-    table.ir1 = wavelet_filter(ir1)
-    table.ir2 = wavelet_filter(ir2)
-    table.red1 = wavelet_filter(red1)
-    table.red2 = wavelet_filter(red2)
+    ir1 = wavelet_filter(ir1)
+    ir2 = wavelet_filter(ir2)
+    red1 = wavelet_filter(red1)
+    red2 = wavelet_filter(red2)
 
+    min_table_length = min(min(min(len(ir1), len(ir2)),len(red1)),len(red2))
+    ir1 = ir1[0:min_table_length]
+    ir2 = ir2[0:min_table_length]
+    red1 = red1[0:min_table_length]
+    red2 = red2[0:min_table_length]
+
+    table.ir1 = ir1
+    table.ir2 = ir2
+    table.red1 = red1
+    table.red2 = red2
     return table
 
 
 if __name__ == '__main__':
     df = pd.read_table('../new_sensor/raw/14_50_02.txt', sep=',', header=None)
     df.columns = ['red1', 'ir1', 'red2', 'ir2']
-    df = df[50:len(df)//2-1]
+    df = df[50:len(df) // 2 - 1]
     df.reset_index(drop=True, inplace=True)
     ###################################################################
     # 原始数据
