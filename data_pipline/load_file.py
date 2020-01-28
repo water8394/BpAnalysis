@@ -36,9 +36,9 @@ class SensorData:
     def get_record_number(self):
         return self.record['number']
 
-    def load_by_number(self, k):
+    def load_by_number(self, k, default='data'):
 
-        path = SensorData._combine_path(k)
+        path = SensorData._combine_path(k, default)
         return self.load(path)
 
     def resave_file(self, k, data, default='data'):

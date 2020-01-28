@@ -12,11 +12,11 @@ if __name__ == '__main__':
     sensor = SensorData()
     numbers = sensor.get_record_number()
 
-    k = 26
+    k = 5
     d = sensor.load_by_number(k)
-    Plot.show_wave(d, 'ir1')
+    # Plot.show_wave(d, 'ir2')
 
 
-    d2 = remove_part(d, [0, 100])
+    d2 = remove_part(d, [0, 200])
     #sensor.resave_file(k, d2)
-    Plot.show_wave(d2, 'ir1')
+    Plot.show_wave(d2, 'ir2')

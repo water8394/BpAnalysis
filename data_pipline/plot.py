@@ -23,6 +23,13 @@ class Plot:
         figture.set_xticklabels([x // 400 for x in x_ticks], fontsize=10)
         plt.title(title, fontsize=13)
 
+    @staticmethod
+    def plot_feature_point(df, x):
+        plt.plot(df, c='b')
+        y = [df[_] for _ in x]
+        plt.scatter(x, y, c='r', marker='*')
+        plt.show()
+
 
 if __name__ == '__main__':
     list = [1, 3, 2, 5, 6, 8, 3, 1]
