@@ -34,7 +34,8 @@ class SensorData:
         return '../scene/' + default + '/' + str(k) + '.txt'
 
     def get_record_number(self):
-        return self.record['number']
+        record = self.record[self.record['usage'] != 0]
+        return record['number']
 
     def load_by_number(self, k, default='data'):
 
@@ -42,7 +43,7 @@ class SensorData:
         return self.load(path)
 
     def resave_file(self, k, data, default='data'):
-        path = SensorData._combine_path(k,default)
+        path = SensorData._combine_path(k, default)
         with open(path, 'w+') as f:
             f.seek(0)
             for i in range(data.shape[0]):
@@ -53,12 +54,15 @@ class SensorData:
 
 
 if __name__ == '__main__':
-    data = SensorData.load(path='../scene/data/2.txt')
+    d = SensorData.load(path='../scene/data/2.txt')
     # print(data)
     sensor = SensorData()
     record = sensor.record
+
     # print(record[record['number'] > 20])
     # print(record)
     # print(sensor.get_record_number())
 
     # sensor.resave_file(100, data)
+
+    print(sensor.get_record_number())

@@ -6,8 +6,10 @@ from load_file import SensorData
 class Plot:
 
     @staticmethod
-    def show(data):
-        plt.plot(data)
+    def show(*data):
+        plt.figure(figsize=(14, 6))
+        for d in data:
+            plt.plot(d)
         plt.show()
 
     @staticmethod

@@ -6,7 +6,6 @@ def find_peek(data):
     """
     寻找单路数据的峰值
     """
-    # find one serials peeks
     amplitude = 0.5
     peek_list = []
     max_value = data.max()
@@ -31,11 +30,29 @@ def find_peek(data):
     return peek_list
 
 
+def save_peeks(data, k):
+    """
+    保存数据的峰值点索引
+    """
+    path = SensorData._combine_path(k, default='peek_index')
+    with open(path, 'w+') as f:
+        f.seek(0)
+        for d in data:
+            if type(d) is int:
+                f.writelines(str(d) + '\n')
+            else:
+                f.writelines(','.join([str(_) for _ in d]) + '\n')
+        f.truncate()
+
+
 if __name__ == '__main__':
-
     sensor = SensorData()
-    d = sensor.load_by_number(8, 'regular')
+    ids = sensor.get_record_number()
+    for k in ids:
 
-    ir = d.ir1
-    x = find_peek(ir)
-    Plot.plot_feature_point(ir, x)
+        d = sensor.load_by_number(k, 'regular')
+        Plot.show(d.ir1, d.ir2)
+        # col = d.ir1
+        # x = find_peek(col)
+        # Plot.plot_feature_point(col, x)
+        # save_peeks(x, k)
