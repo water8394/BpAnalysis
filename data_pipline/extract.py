@@ -49,10 +49,8 @@ if __name__ == '__main__':
     sensor = SensorData()
     ids = sensor.get_record_number()
     for k in ids:
-
         d = sensor.load_by_number(k, 'regular')
-        Plot.show(d.ir1, d.ir2)
-        # col = d.ir1
-        # x = find_peek(col)
-        # Plot.plot_feature_point(col, x)
-        # save_peeks(x, k)
+        col = d.ir1
+        x = find_peek(col)
+        #Plot.plot_feature_point(col, x)
+        save_peeks(x, k)
