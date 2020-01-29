@@ -37,6 +37,7 @@ if __name__ == '__main__':
     sensor = SensorData()
     ids = sensor.get_record_number()
     for k in ids:
+
         print('current stage: ' + str(k))
         d = sensor.load_by_number(k, default='regular')
         pks, mid_pks, vl_pks = sensor.load_all_index(k)
