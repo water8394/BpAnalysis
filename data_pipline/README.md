@@ -17,9 +17,15 @@
 
 ## 📁 文件存储说明
 data: 原始数据，不允许做修改
+
 regular: 处理过后的数据
+
 peak_index: 主波峰值点索引文件，包含两路ir数据
+
 mid_peak_index: 只包含单路ir1的重播波峰值点
+
 vally_peak_index: 只包含单路ir1的波谷点
+
 feature_point: 如果一个周期内的波形包含4个特征点，则记录该4个特征点的索引并保存
+
 metric: 通过特征点计算得到的指标文件，共有9个特征值
