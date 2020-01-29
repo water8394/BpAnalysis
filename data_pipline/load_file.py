@@ -69,6 +69,17 @@ class SensorData:
         vl_pks = SensorData.load_peek_index(k, default='vally_peak_index')
         return pks, mid_pks, vl_pks
 
+    @staticmethod
+    def save_all_indicators(k, data, default='feature_point'):
+        path = SensorData._combine_path(k, default)
+        with open(path, 'w+') as f:
+            f.seek(0)
+            for i in range(len(data)):
+                line = data[i]
+                line = ','.join(str(_) for _ in line) + '\n'
+                f.writelines(line)
+            f.truncate()
+
 
 if __name__ == '__main__':
     d = SensorData.load(path='../scene/data/2.txt')

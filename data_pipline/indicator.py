@@ -35,11 +35,12 @@ def find_match_point(data, _range):
 
 if __name__ == '__main__':
     sensor = SensorData()
-    k = 1
-    d = sensor.load_by_number(k, default='regular')
-
-    pks, mid_pks, vl_pks = sensor.load_all_index(k)
-    #Plot.plot_points(d.ir1, pks, mid_pks, vl_pks)
-    points = extract_usage_point(pks, mid_pks, vl_pks)
-
-    Plot.plot_feature_point(d.ir1, points)
+    ids = sensor.get_record_number()
+    for k in ids:
+        print('current stage: ' + str(k))
+        d = sensor.load_by_number(k, default='regular')
+        pks, mid_pks, vl_pks = sensor.load_all_index(k)
+        #Plot.plot_points(d.ir1, pks, mid_pks, vl_pks)
+        points = extract_usage_point(pks, mid_pks, vl_pks)
+        #Plot.plot_feature_point(d.ir1, points)
+        sensor.save_all_indicators(k, points)
