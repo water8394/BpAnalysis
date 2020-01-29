@@ -6,7 +6,7 @@ def find_peek(data):
     """
     寻找单路数据的峰值
     """
-    amplitude = 0.5
+    amplitude = 0.7
     peek_list = []
     max_value = data.max()
     threshold = amplitude * max_value
@@ -30,6 +30,61 @@ def find_peek(data):
     return peek_list
 
 
+def find_mid_peek(data, peek_index):
+    """
+    寻找所有重播波点
+    """
+    ret = []
+    for i in range(len(peek_index)-2):
+        part = data[peek_index[i]+10: peek_index[i+1]-10]
+        ret.append(find_sigle_peak(part))
+    return ret
+
+
+def find_sigle_peak(data):
+    """
+    在一个区间段内寻找重播波点
+    """
+    ret = -1
+    _max = -1
+    idx = data.index[20:-5]
+    for i in idx:
+        if data[i] > _max and data[i] > data[i-3] and data[i] > data[i+3]:
+            _max = data[i]
+            ret = i
+    return ret
+
+
+
+def find_peek_by_other(data, peek_index):
+    """
+    通过一路数据的 peek 来寻来另外一路的peek
+    """
+    idx = []
+    for i in range(peek_index.shape[0]):
+        val = int(peek_index.at[i, 'ir1'])
+        idx.append([val - 50, val + 50])
+    ret = []
+    for rng in idx:
+        part = data[rng[0]: rng[1]]
+        ret.append(max_index(part))
+    return ret
+
+
+def max_index(data):
+    """
+    DataFrame 区间内最大值的索引
+    """
+    _max = -10000
+    ret = -1
+    idx = data.index
+    for i in idx:
+        if data[i] > _max:
+            ret = i
+            _max = data[i]
+    return ret
+
+
 def save_peeks(data, k):
     """
     保存数据的峰值点索引
@@ -48,9 +103,21 @@ def save_peeks(data, k):
 if __name__ == '__main__':
     sensor = SensorData()
     ids = sensor.get_record_number()
-    for k in ids:
-        d = sensor.load_by_number(k, 'regular')
-        col = d.ir1
-        x = find_peek(col)
-        #Plot.plot_feature_point(col, x)
-        save_peeks(x, k)
+    # for k in ids:
+    #     # k = 1
+    #     print('peek ---> ' + str(k))
+    #     d = sensor.load_by_number(k, 'regular')
+    #     pki = sensor.load_peek_index(k)
+    #     col = d.ir2
+    #     peeks = find_peek_by_other(col, pki)
+    #
+    #     #Plot.plot_all_peek(d.ir1, d.ir2, pki, peeks)
+    #     val = zip(pki['ir1'].values.tolist(), peeks)
+    #
+    #     save_peeks(val, k)
+
+    k = 3
+    d = sensor.load_by_number(k, 'regular')
+    pks = sensor.load_peek_index(k)
+    mid_pks = find_mid_peek(d.ir1, pks['ir1'].values.tolist())
+    Plot.plot_sigle_peek(d.ir1, mid_pks)

@@ -2,15 +2,17 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from wavelet import *
 
+"""
+2019-9-5
+对数据做预处理,过程包括:
+    1. 去除DC分量
+    2. 均值+小波滤波
+    3. 去除基线漂移
+    4. 放缩波形
+"""
+
+
 def remove_dc(table):
-    """
-    2019-9-5
-    对数据做预处理,过程包括:
-        1. 去除DC分量
-        2. 均值+小波滤波
-        3. 去除基线漂移
-        4. 归一化波形
-    """
     # 1. 去除 DC 分量
     min_ir1 = min(table.ir1)
     min_ir2 = min(table.ir2)
@@ -31,8 +33,7 @@ def filter(table):
     # 2. 均值 + 小波滤波
 
     # 均值
-    table = table.rolling(window=30).mean()
-    table = table[30:]
+    table = mean_filter(table)
     ################################################
     # 反转波形
     ir1_max = max(table.ir1)
@@ -64,6 +65,52 @@ def filter(table):
     new_table.red2 = red2
 
     return new_table
+
+
+def reverse(data):
+    """
+    反转波形
+    """
+    ir1_max = max(data.ir1)
+    ir2_max = max(data.ir2)
+    red1_max = max(data.red1)
+    red2_max = max(data.red2)
+    data.ir1 = [ir1_max - _ for _ in data.ir1]
+    data.ir2 = [ir2_max - _ for _ in data.ir2]
+    data.red1 = [red1_max - _ for _ in data.red1]
+    data.red2 = [red2_max - _ for _ in data.red2]
+    return data
+
+
+def mean_filter(data):
+    """
+    均值滤波
+    """
+    data = data.rolling(window=30).mean()
+    return data[30:]
+
+
+def scale(data):
+    """
+    4. 放缩波形
+    """
+    data.ir1 = _scale(data.ir1)
+    data.ir2 = _scale(data.ir2)
+    data.red1 = _scale(data.red1)
+    data.red2 = _scale(data.red2)
+    return data
+
+def _scale(data):
+    _scale = 1000
+    data = data.values.tolist()
+    _max = max(data)
+    _min = min(data)
+    _range = _max - _min
+    data = [_ + abs(_min) for _ in data]
+    ret = []
+    for _val in data:
+        ret.append(_val * _scale / _range)
+    return ret
 
 
 if __name__ == '__main__':

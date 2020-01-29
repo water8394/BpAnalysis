@@ -1,3 +1,4 @@
+from data_pipline import *
 import matplotlib.pyplot as plt
 
 from load_file import SensorData
@@ -26,11 +27,26 @@ class Plot:
         plt.title(title, fontsize=13)
 
     @staticmethod
-    def plot_feature_point(df, x):
-        plt.plot(df, c='b')
-        y = [df[_] for _ in x]
-        plt.scatter(x, y, c='r', marker='*')
+    def plot_sigle_peek(df, x):
+        Plot._plot_single_data_peek(df, x)
         plt.show()
+
+    @staticmethod
+    def plot_all_peek(df1, df2, x1, x2):
+        Plot._plot_single_data_peek(df1, x1)
+        Plot._plot_single_data_peek(df2, x2, c='g', m='r^')
+        plt.show()
+
+    @staticmethod
+    def _plot_single_data_peek(df, x, c='b', m='r*'):
+        plt.plot(df, c=c)
+        if type(x) is pd.DataFrame:
+            x = x['ir1'].values.tolist()
+            y = [df[_] for _ in x]
+        elif type(x) is list:
+            x = [_ for _ in x if _ != -1]
+            y = [df[_] for _ in x]
+        plt.scatter(x, y, c=m[0], marker=m[1])
 
 
 if __name__ == '__main__':

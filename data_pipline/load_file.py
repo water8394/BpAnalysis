@@ -30,6 +30,16 @@ class SensorData:
         return data
 
     @staticmethod
+    def load_peek_index(k):
+        path = SensorData._combine_path(k, default='peek_index')
+        idx = pd.read_table(path, header=None, sep=',')
+        if idx.shape[1] == 1:
+            idx.columns = ['ir1']
+        elif idx.shape[1] == 2:
+            idx.columns = ['ir1', 'ir2']
+        return idx
+
+    @staticmethod
     def _combine_path(k, default='data'):
         return '../scene/' + default + '/' + str(k) + '.txt'
 
@@ -42,7 +52,7 @@ class SensorData:
         path = SensorData._combine_path(k, default)
         return self.load(path)
 
-    def resave_file(self, k, data, default='data'):
+    def resave_file(self, k, data, default='regular'):
         path = SensorData._combine_path(k, default)
         with open(path, 'w+') as f:
             f.seek(0)

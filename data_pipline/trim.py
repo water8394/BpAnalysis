@@ -18,13 +18,13 @@ if __name__ == '__main__':
     sensor = SensorData()
     numbers = sensor.get_record_number()
 
-    k = 19
+    k = 25
     re_save = 0  # 0: origin  / 1: trim
     d = sensor.load_by_number(k, default='regular')
 
     if not re_save:
         Plot.show(d.ir1, d.ir2)
     else:
-        d2 = remove_part(d, [0, 5400])
+        d2 = remove_part(d, [0, 5500])
         #Plot.show(d2.ir1, d2.ir2)
         sensor.resave_file(k, d2, default='regular')

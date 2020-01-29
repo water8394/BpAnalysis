@@ -277,6 +277,7 @@ def plot_peek(data, peek):
     plt.scatter(peek, peek_value, c='r')
     plt.show()
 
+
 if __name__ == '__main__':
     # file_name = sys.argv[1]
     file_name = '09-01/14_50_02.txt'
