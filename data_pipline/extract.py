@@ -1,6 +1,6 @@
 from load_file import SensorData
 from plot import Plot
-
+from pre_process import *
 
 def find_peek(data):
     """
@@ -85,11 +85,11 @@ def max_index(data):
     return ret
 
 
-def save_peeks(data, k):
+def save_peeks(data, k, default='peak_index'):
     """
     保存数据的峰值点索引
     """
-    path = SensorData._combine_path(k, default='peek_index')
+    path = SensorData._combine_path(k, default=default)
     with open(path, 'w+') as f:
         f.seek(0)
         for d in data:
@@ -103,6 +103,9 @@ def save_peeks(data, k):
 if __name__ == '__main__':
     sensor = SensorData()
     ids = sensor.get_record_number()
+    """
+    找双路 PPG 峰值点
+    """
     # for k in ids:
     #     # k = 1
     #     print('peek ---> ' + str(k))
@@ -113,11 +116,23 @@ if __name__ == '__main__':
     #
     #     #Plot.plot_all_peek(d.ir1, d.ir2, pki, peeks)
     #     val = zip(pki['ir1'].values.tolist(), peeks)
-    #
     #     save_peeks(val, k)
 
-    k = 3
-    d = sensor.load_by_number(k, 'regular')
-    pks = sensor.load_peek_index(k)
-    mid_pks = find_mid_peek(d.ir1, pks['ir1'].values.tolist())
-    Plot.plot_sigle_peek(d.ir1, mid_pks)
+    """
+    找重播波峰值点
+    """
+    # for k in ids:
+    #     d = sensor.load_by_number(k, 'regular')
+    #     pks = sensor.load_peek_index(k)
+    #     mid_pks = find_mid_peek(d.ir1, pks['ir1'].values.tolist())
+    #     Plot.plot_sigle_peek(d.ir1, mid_pks)
+        #save_peeks(mid_pks, k, default='mid_peak_index')
+
+    """
+    找 波谷点
+    """
+    for k in ids:
+        d = sensor.load_by_number(k, 'regular')
+        d = reverse(d)
+        pks = find_peek(d.ir1)
+        save_peeks(pks, k, default='vally_peak_index')

@@ -31,7 +31,7 @@ class SensorData:
 
     @staticmethod
     def load_peek_index(k):
-        path = SensorData._combine_path(k, default='peek_index')
+        path = SensorData._combine_path(k, default='peak_index')
         idx = pd.read_table(path, header=None, sep=',')
         if idx.shape[1] == 1:
             idx.columns = ['ir1']

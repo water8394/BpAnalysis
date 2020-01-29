@@ -7,6 +7,10 @@ from load_file import SensorData
 class Plot:
 
     @staticmethod
+    def init_plot():
+        plt.figure(figsize=(15, 6))
+
+    @staticmethod
     def show(*data):
         plt.figure(figsize=(14, 6))
         for d in data:
@@ -28,11 +32,13 @@ class Plot:
 
     @staticmethod
     def plot_sigle_peek(df, x):
+        Plot.init_plot()
         Plot._plot_single_data_peek(df, x)
         plt.show()
 
     @staticmethod
     def plot_all_peek(df1, df2, x1, x2):
+        Plot.init_plot()
         Plot._plot_single_data_peek(df1, x1)
         Plot._plot_single_data_peek(df2, x2, c='g', m='r^')
         plt.show()
