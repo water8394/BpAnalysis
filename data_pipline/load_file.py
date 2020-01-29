@@ -30,8 +30,8 @@ class SensorData:
         return data
 
     @staticmethod
-    def load_peek_index(k):
-        path = SensorData._combine_path(k, default='peak_index')
+    def load_peek_index(k, default='peak_index'):
+        path = SensorData._combine_path(k, default=default)
         idx = pd.read_table(path, header=None, sep=',')
         if idx.shape[1] == 1:
             idx.columns = ['ir1']
@@ -61,6 +61,13 @@ class SensorData:
                 line = ','.join(str(_) for _ in line) + '\n'
                 f.writelines(line)
             f.truncate()
+
+    @staticmethod
+    def load_all_index(k):
+        pks = SensorData.load_peek_index(k)
+        mid_pks = SensorData.load_peek_index(k, default='mid_peak_index')
+        vl_pks = SensorData.load_peek_index(k, default='vally_peak_index')
+        return pks, mid_pks, vl_pks
 
 
 if __name__ == '__main__':

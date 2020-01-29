@@ -2,6 +2,7 @@ from load_file import SensorData
 from plot import Plot
 from pre_process import *
 
+
 def find_peek(data):
     """
     寻找单路数据的峰值

@@ -1,6 +1,6 @@
-from data_pipline import *
 import matplotlib.pyplot as plt
 
+from data_pipline import *
 from load_file import SensorData
 
 
@@ -31,28 +31,55 @@ class Plot:
         plt.title(title, fontsize=13)
 
     @staticmethod
-    def plot_sigle_peek(df, x):
+    def plot_sigle_peak(df, x):
         Plot.init_plot()
-        Plot._plot_single_data_peek(df, x)
+        Plot._plot_single_data_peak(df, x)
         plt.show()
 
     @staticmethod
-    def plot_all_peek(df1, df2, x1, x2):
+    def plot_all_peak(df1, df2, x1, x2):
         Plot.init_plot()
-        Plot._plot_single_data_peek(df1, x1)
-        Plot._plot_single_data_peek(df2, x2, c='g', m='r^')
+        Plot._plot_single_data_peak(df1, x1)
+        Plot._plot_single_data_peak(df2, x2, c='g', m='r^')
         plt.show()
 
     @staticmethod
-    def _plot_single_data_peek(df, x, c='b', m='r*'):
+    def _plot_single_data_peak(df, x, c='b', m='r*'):
         plt.plot(df, c=c)
+        y = []
         if type(x) is pd.DataFrame:
             x = x['ir1'].values.tolist()
+            x = [_ for _ in x if _ != -1]
             y = [df[_] for _ in x]
         elif type(x) is list:
             x = [_ for _ in x if _ != -1]
             y = [df[_] for _ in x]
-        plt.scatter(x, y, c=m[0], marker=m[1])
+        plt.scatter(x, y, c=m[0], marker=m[1], s=130)
+
+    @staticmethod
+    def plot_points(data, peak_index, mid_peak_index, vally_peak_index):
+        Plot.init_plot()
+        Plot._plot_single_data_peak(data, peak_index, m='r*')
+        Plot._plot_single_data_peak(data, mid_peak_index, m='g^')
+        Plot._plot_single_data_peak(data, vally_peak_index, m='mP')
+        plt.show()
+
+    @staticmethod
+    def plot_feature_point(data, point_list):
+        Plot.init_plot()
+        plt.plot(data)
+        x1, x2, x3, x4 = [], [], [], []
+        for points in point_list:
+            x1.append(points[0])
+            x2.append(points[1])
+            x3.append(points[2])
+            x4.append(points[3])
+        Plot._plot_single_data_peak(data, x1, m='r*')
+        Plot._plot_single_data_peak(data, x2, m='g^')
+        Plot._plot_single_data_peak(data, x3, m='mP')
+        Plot._plot_single_data_peak(data, x4, m='r*')
+
+        plt.show()
 
 
 if __name__ == '__main__':
