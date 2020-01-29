@@ -80,6 +80,24 @@ class SensorData:
                 f.writelines(line)
             f.truncate()
 
+    @staticmethod
+    def load_feature_points(k):
+        path = SensorData._combine_path(k, default='feature_point')
+        data = pd.read_table(path, header=None, sep=',')
+        data.columns = ['f1', 'f2', 'f3', 'f4']
+        return data
+
+    @staticmethod
+    def save_metric(k, metrics):
+        path = SensorData._combine_path(k, default='metric')
+        with open(path, 'w+') as f:
+            f.seek(0)
+            tags = 'bf, bs, sd, df, sf, rr, asd, asf,ptt \n'
+            f.writelines(tags)
+            line = ','.join([str(_) for _ in metrics])
+            f.writelines(line + '\n')
+            f.truncate()
+
 
 if __name__ == '__main__':
     d = SensorData.load(path='../scene/data/2.txt')
