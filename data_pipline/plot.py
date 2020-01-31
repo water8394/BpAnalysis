@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from scipy import stats
 
 from data_pipline import *
 from load_file import SensorData
@@ -45,7 +46,8 @@ class Plot:
 
     @staticmethod
     def _plot_single_data_peak(df, x, c='b', m='r*'):
-        plt.plot(df, c=c)
+
+        # plt.plot(df, c=c)
         y = []
         if type(x) is pd.DataFrame:
             x = x['ir1'].values.tolist()
@@ -54,7 +56,7 @@ class Plot:
         elif type(x) is list:
             x = [_ for _ in x if _ != -1]
             y = [df[_] for _ in x]
-        plt.scatter(x, y, c=m[0], marker=m[1], s=130)
+        plt.scatter(x, y, c=m[0], marker=m[1], s=140)
 
     @staticmethod
     def plot_points(data, peak_index, mid_peak_index, vally_peak_index):
@@ -83,30 +85,70 @@ class Plot:
 
     @staticmethod
     def plot_single_metric(metric, step=10):
+        skew = 'Skew: ' + str(round(float(stats.skew(metric)), 2))
+        _mean = np.mean(metric)
+        _median = np.median(metric)
         _max = max(metric)
         _min = min(metric)
         _range = _max - _min
         step_val = _range / step
-        _val = [0] * (step+1)
+        _val = [0] * (step + 1)
         for i in metric:
             n = int((i - _min) / step_val)
             _val[n] += 1
+        x = [str(int(_min + _ * step_val)) for _ in range(11)]
+        _mean_x, _median_x = 0, 0
+        _mean_y, _median_y = 0, 0
+        for i, _x in enumerate(x):
+            if int(_x) < _mean < int(_x) + step_val:
+                _mean_x = i
+                _mean_y = _val[i]
+            if int(_x) < _median < int(_x) + step_val:
+                _median_x = i
+                _median_y = _val[i]
 
-        x = [str(int(_min + _*step_val)) for _ in range(11)]
         plt.bar(range(11), _val, tick_label=x)
+        if _mean_x == _median_x:
+            width = 0.45
+            plt.bar(_mean_x - width / 2, _mean_y, width=width, fc='m', label='mean')
+            plt.bar(_median_x + width / 2, _median_y, width=width, fc='g', label='median')
+        else:
+            plt.bar(_mean_x, _mean_y, fc='m', label='mean')
+            plt.bar(_median_x, _median_y, fc='g', label='median')
+
+        plt.text(1, max(_val) - 1, s=skew, fontsize=10, ha="center", va="center",
+                 bbox=dict(boxstyle="square", ec=(1., 0.5, 0.5), fc=(1., 0.8, 0.8), ))
+        plt.legend()
 
     @staticmethod
     def plot_metrics(metrics, names, row=3, col=3):
-        if len(metrics) != row*col:
+        if len(metrics) != row * col:
             print('subplot number error')
 
-        plt.figure(figsize=(18, 10))
+        plt.figure(figsize=(18, 10), dpi=100)
 
         for i in range(len(names)):
-            plt.subplot(row, col, i+1)
+            plt.subplot(row, col, i + 1)
             plt.title('Paramter: ' + names[i], fontsize=10)
             Plot.plot_single_metric(metrics[names[i]])
         plt.subplots_adjust(wspace=0.4, hspace=0.4)
+        plt.show()
+
+    @staticmethod
+    def plot_all_and_part_data(data, part):
+        plt.plot(data, c='b')
+        x1, x2, x3, x4 = [], [], [], []
+        for i in range(part.shape[0]):
+            plt.plot(data[part.loc[i, 'f1']: part.loc[i, 'f4']], c='y', linewidth=3, alpha=0.8)
+            x1.append(part.loc[i, 'f1'])
+            x2.append(part.loc[i, 'f2'])
+            x3.append(part.loc[i, 'f3'])
+            x4.append(part.loc[i, 'f4'])
+        Plot._plot_single_data_peak(data, x1, m='r*')
+        Plot._plot_single_data_peak(data, x2, m='r^')
+        Plot._plot_single_data_peak(data, x3, m='rP')
+        Plot._plot_single_data_peak(data, x4, m='r*')
+
         plt.show()
 
 
