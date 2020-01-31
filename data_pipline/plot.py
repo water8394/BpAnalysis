@@ -81,6 +81,34 @@ class Plot:
 
         plt.show()
 
+    @staticmethod
+    def plot_single_metric(metric, step=10):
+        _max = max(metric)
+        _min = min(metric)
+        _range = _max - _min
+        step_val = _range / step
+        _val = [0] * (step+1)
+        for i in metric:
+            n = int((i - _min) / step_val)
+            _val[n] += 1
+
+        x = [str(int(_min + _*step_val)) for _ in range(11)]
+        plt.bar(range(11), _val, tick_label=x)
+
+    @staticmethod
+    def plot_metrics(metrics, names, row=3, col=3):
+        if len(metrics) != row*col:
+            print('subplot number error')
+
+        plt.figure(figsize=(18, 10))
+
+        for i in range(len(names)):
+            plt.subplot(row, col, i+1)
+            plt.title('Paramter: ' + names[i], fontsize=10)
+            Plot.plot_single_metric(metrics[names[i]])
+        plt.subplots_adjust(wspace=0.4, hspace=0.4)
+        plt.show()
+
 
 if __name__ == '__main__':
     list = [1, 3, 2, 5, 6, 8, 3, 1]
