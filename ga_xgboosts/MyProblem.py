@@ -7,7 +7,6 @@ from commons.load_indicator import load
 from sklearn.metrics import mean_absolute_error
 
 
-
 class MyProblem(ea.Problem):  # 继承Problem父类
     def __init__(self):
         name = 'MyProblem'  # 初始化name（函数名称，可以随意设置）
@@ -32,7 +31,6 @@ class MyProblem(ea.Problem):  # 继承Problem父类
         subsample_list = Vars[:, [4]]
         colsample_bytree_list = Vars[:, [5]]
         reg_lambda_list = Vars[:, [6]]
-
 
         l = len(learning_rate_list)
         res = []

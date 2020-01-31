@@ -1,5 +1,5 @@
 from data_pipline import *
-
+import json
 
 class SensorData:
 
@@ -40,8 +40,8 @@ class SensorData:
         return idx
 
     @staticmethod
-    def _combine_path(k, default='data'):
-        return '../scene/' + default + '/' + str(k) + '.txt'
+    def _combine_path(k, default='data', form='txt'):
+        return '../scene/' + default + '/' + str(k) + '.' + form
 
     def get_record_number(self):
         record = self.record[self.record['usage'] != 0]
@@ -97,6 +97,13 @@ class SensorData:
             line = ','.join([str(_) for _ in metrics])
             f.writelines(line + '\n')
             f.truncate()
+
+    @staticmethod
+    def load_json_metric(k):
+        path = SensorData._combine_path(k, default='metric', form='json')
+        with open(path, 'r') as f:
+            data = json.load(f)
+        return data
 
 
 if __name__ == '__main__':

@@ -1,4 +1,5 @@
 from load_file import SensorData
+import json
 
 
 def cal_ptt(pks_index, s_index):
@@ -17,6 +18,21 @@ def cal_ptt(pks_index, s_index):
     if up >= down:
         return [_ for _ in ret if _ > 0]
     return [_ for _ in ret if _ < 0]
+
+
+def dump_metrics_to_json(metrics, file):
+    data = {
+        'bf': metrics[0],
+        'bs': metrics[1],
+        'sd': metrics[2],
+        'df': metrics[3],
+        'sf': metrics[4],
+        'rr': metrics[5],
+        'asd': metrics[6],
+        'asf': metrics[7],
+        'ptt': metrics[8],
+    }
+    json.dump(data, file)
 
 
 if __name__ == '__main__':
@@ -54,6 +70,9 @@ if __name__ == '__main__':
         ptt = cal_ptt(pks, s)
         metric_list.append(ptt)
 
+        with open('../scene/metric/'+str(k)+'.json', 'w') as file:
+            dump_metrics_to_json(metric_list, file)
+
         metric = []
         for group in metric_list:
             if len(group) != 0:
@@ -61,4 +80,3 @@ if __name__ == '__main__':
             else:
                 metric.append(0)
         print(metric)
-        sensor.save_metric(k, metric)
