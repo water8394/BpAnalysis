@@ -58,7 +58,9 @@ class MyProblem(ea.Problem):  # 继承Problem父类
             # 预测结果
             y = predictor.predict(test_X)
             # 计算损失值
+            print('y' + str(y) + '   >>>>>>>>>')
             loss = mean_absolute_error(y, test_Y)
+
             res.append([loss])
 
         pop.ObjV = np.array(res) #赋值给pop种群对象的ObjV属性
@@ -70,16 +72,16 @@ if __name__ == '__main__':
     # 加载数据
     df = load_data()
     train_X, test_X, train_Y, test_Y = train_test_split(
-        df[['bf', 'bs', 'sd', 'df', 'sf', 'rr', 'asd', 'asf', 'ptt']], df['high'])
+        df[['bf', 'bs', 'sd', 'df', 'sf', 'rr', 'asd', 'asf', 'ptt']], df['low'])
 
     """==================================种群设置==============================="""
     Encoding = 'RI'  # 编码方式
-    NIND = 100  # 种群规模
+    NIND = 10  # 种群规模
     Field = ea.crtfld(Encoding, problem.varTypes, problem.ranges, problem.borders)  # 创建区域描述器
     population = ea.Population(Encoding, Field, NIND)  # 实例化种群对象（此时种群还没被初始化，仅仅是完成种群对象的实例化）
     """================================算法参数设置============================="""
     myAlgorithm = ea.soea_DE_rand_1_L_templet(problem, population)  # 实例化一个算法模板对象
-    myAlgorithm.MAXGEN = 50  # 最大进化代数
+    myAlgorithm.MAXGEN = 5  # 最大进化代数
     myAlgorithm.mutOper.F = 0.5  # 差分进化中的参数F
     myAlgorithm.recOper.XOVR = 0.7  # 重组概率
     """===========================调用算法模板进行种群进化======================="""
