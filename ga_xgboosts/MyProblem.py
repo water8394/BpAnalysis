@@ -5,7 +5,7 @@ import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from commons.load_indicator import load
 from sklearn.metrics import mean_absolute_error
-
+from data_pipline.model import load_data
 
 class MyProblem(ea.Problem):  # 继承Problem父类
     def __init__(self):
@@ -68,9 +68,9 @@ if __name__ == '__main__':
     """================================实例化问题对象==========================="""
     problem = MyProblem()  # 生成问题对象
     # 加载数据
-    df = load().loc[:70, :]
+    df = load_data()
     train_X, test_X, train_Y, test_Y = train_test_split(
-        df[['ptt', 'vally_ptt', 'rr1', 'rr2', 'sum1', 'up1', 'down1', 'sum2', 'up2', 'down2']], df["high_pluse"])
+        df[['bf', 'bs', 'sd', 'df', 'sf', 'rr', 'asd', 'asf', 'ptt']], df['high'])
 
     """==================================种群设置==============================="""
     Encoding = 'RI'  # 编码方式
