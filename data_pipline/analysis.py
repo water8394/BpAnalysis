@@ -17,6 +17,6 @@ if __name__ == '__main__':
     """
     筛选合理的特征片段
     """
-    d = sensor.load_by_number(k, default='regular')
-    part = sensor.load_feature_points(k)
-    Plot.plot_all_and_part_data(d.ir1, part)
+    # d = sensor.load_by_number(k, default='regular')
+    # part = sensor.load_feature_points(k)
+    # Plot.plot_all_and_part_data(d.ir1, part)
