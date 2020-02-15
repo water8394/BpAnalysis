@@ -1,11 +1,8 @@
-from plot import *
 from load_file import SensorData
-from scipy import stats
-import json
+from plot import *
 
 if __name__ == '__main__':
     sensor = SensorData()
-
     k = 3
     """
     指标分析
@@ -24,11 +21,21 @@ if __name__ == '__main__':
     """
     处理70组数据
     """
-    df = pd.read_table('../scene/record/test_log.txt', sep='\t')
-    df.columns = ['idx','name', 'date', 'h1', 'l1', 'h2', 'l2']
-    high, low = [], []
-    for i in range(df.shape[0]):
-        high.append(int(df.loc[i, 'h1']) + int(df.loc[i, 'h2']))
-        low.append(int(df.loc[i, 'l1']) + int(df.loc[i, 'l2']))
-    print(high)
-    print(low)
+    # df = pd.read_table('../scene/record/test_log.txt', sep='\t')
+    # df.columns = ['idx', 'name', 'date', 'h1', 'l1', 'h2', 'l2']
+    # high, low = [], []
+    # for i in range(df.shape[0]):
+    #     high.append((int(df.loc[i, 'h1']) + int(df.loc[i, 'h2'])) / 2)
+    #     low.append((int(df.loc[i, 'l1']) + int(df.loc[i, 'l2'])) / 2)
+    #
+    # run = pd.read_excel('../scene/record/run.xlsx', header=None)
+    # high = list(run[0])
+    # low = list(run[1])
+    # middle = int(len(high)/2)
+    # print(high)
+    # print(low)
+    # Plot.plot_single_metric(low[middle:], color='gg')
+    # plt.show()
+
+
+

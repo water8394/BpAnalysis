@@ -84,7 +84,7 @@ class Plot:
         plt.show()
 
     @staticmethod
-    def plot_single_metric(metric, step=10):
+    def plot_single_metric(metric, step=10, color='bm'):
         skew = 'Skew: ' + str(round(float(stats.skew(metric)), 2))
         _mean = np.mean(metric)
         _median = np.median(metric)
@@ -107,17 +107,19 @@ class Plot:
                 _median_x = i
                 _median_y = _val[i]
 
-        plt.bar(range(11), _val, tick_label=x)
+        plt.bar(range(11), _val, tick_label=x, fc=color[0])
         if _mean_x == _median_x:
             width = 0.45
-            plt.bar(_mean_x - width / 2, _mean_y, width=width, fc='m', label='mean')
-            plt.bar(_median_x + width / 2, _median_y, width=width, fc='g', label='median')
+            #plt.bar(_mean_x - width / 2, _mean_y, width=width, fc='m', label='mean')
+            plt.bar(_mean_x, _mean_y, fc=color[1], label='mean')
+            #plt.bar(_median_x + width / 2, _median_y, width=width, fc='g', label='median')
         else:
-            plt.bar(_mean_x, _mean_y, fc='m', label='mean')
-            plt.bar(_median_x, _median_y, fc='g', label='median')
+            plt.bar(_mean_x, _mean_y, fc=color[1], label='mean')
+            #plt.bar(_median_x, _median_y, fc='g', label='median')
+            pass
 
-        plt.text(1, max(_val) - 1, s=skew, fontsize=10, ha="center", va="center",
-                 bbox=dict(boxstyle="square", ec=(1., 0.5, 0.5), fc=(1., 0.8, 0.8), ))
+        #plt.text(1, max(_val) - 1, s=skew, fontsize=10, ha="center", va="center",
+                 #bbox=dict(boxstyle="square", ec=(1., 0.5, 0.5), fc=(1., 0.8, 0.8), ))
         plt.legend()
 
     @staticmethod
