@@ -11,15 +11,15 @@ def load_data():
     df = pd.DataFrame(columns=columns)
     for k in ids:
         metric = sensor.load_json_metric(k)
-        high, low = int(record[record['number']==k]['high']), int(record[record['number']==k]['low'])
+        high, low = int(record[record['number'] == k]['high']), int(record[record['number'] == k]['low'])
         l = []
         for name in metric_name:
             l.append(np.mean(metric[name]))
         l.append(high)
         l.append(low)
         insert_row = dict(zip(columns, l))
-        print(insert_row)
         df.loc[df.shape[0]] = insert_row
+    df['ptt'] = [abs(_) for _ in list(df['ptt'])]
     return df
 
 

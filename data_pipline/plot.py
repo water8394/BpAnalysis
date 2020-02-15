@@ -110,16 +110,16 @@ class Plot:
         plt.bar(range(11), _val, tick_label=x, fc=color[0])
         if _mean_x == _median_x:
             width = 0.45
-            #plt.bar(_mean_x - width / 2, _mean_y, width=width, fc='m', label='mean')
+            # plt.bar(_mean_x - width / 2, _mean_y, width=width, fc='m', label='mean')
             plt.bar(_mean_x, _mean_y, fc=color[1], label='mean')
-            #plt.bar(_median_x + width / 2, _median_y, width=width, fc='g', label='median')
+            # plt.bar(_median_x + width / 2, _median_y, width=width, fc='g', label='median')
         else:
             plt.bar(_mean_x, _mean_y, fc=color[1], label='mean')
-            #plt.bar(_median_x, _median_y, fc='g', label='median')
+            # plt.bar(_median_x, _median_y, fc='g', label='median')
             pass
 
-        #plt.text(1, max(_val) - 1, s=skew, fontsize=10, ha="center", va="center",
-                 #bbox=dict(boxstyle="square", ec=(1., 0.5, 0.5), fc=(1., 0.8, 0.8), ))
+        # plt.text(1, max(_val) - 1, s=skew, fontsize=10, ha="center", va="center",
+        # bbox=dict(boxstyle="square", ec=(1., 0.5, 0.5), fc=(1., 0.8, 0.8), ))
         plt.legend()
 
     @staticmethod
@@ -153,6 +153,13 @@ class Plot:
 
         plt.show()
 
+    @staticmethod
+    def plot_diff(pred_h, real_h, pred_l, real_l):
+        plt.plot(pred_h, 'b', marker='*', markeredgecolor='g', markersize=11)
+        plt.plot(real_h, 'r', marker='o', markeredgecolor='g', markersize=9)
+        plt.plot(pred_l, 'b', marker='*', markeredgecolor='g', markersize=11)
+        plt.plot(real_l, 'r', marker='o', markeredgecolor='g', markersize=9)
+        plt.show()
 
 if __name__ == '__main__':
     list = [1, 3, 2, 5, 6, 8, 3, 1]
@@ -160,4 +167,10 @@ if __name__ == '__main__':
 
     sensor = SensorData()
     d = sensor.load_by_number(1)
-    Plot.show_wave(d, s='ir1')
+    # Plot.show_wave(d, s='ir1')
+
+    ph = [4, 6, 7]
+    rh = [5, 4, 5]
+    pl = [14, 16, 17]
+    rl = [15, 14, 16]
+    Plot.plot_diff(ph, rh, pl, rl)
