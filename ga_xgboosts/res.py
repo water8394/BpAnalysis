@@ -1,15 +1,23 @@
 import xgboost as xgb
-from calculate.load import load_all,dump_value
+
+from calculate.load import load_all, dump_value
 
 if __name__ == '__main__':
-
     key = '70'
-    bp = 'high'
-    model = xgb.Booster(model_file='../model/ga_xgboost_'+key+'_'+bp)
+    bp = 'low'
+    m = 'norm_svr_'
+    base = '../model/' + m
+    #model = xgb.Booster(model_file=base + key + '_' + bp)
+    import pickle
+    model = pickle.load(open(base + key + '_' + bp,'rb'))
 
-    x, h, l = load_all(key)
-    y = model.predict(x)
+    test, x, h, l = load_all(key)
+    #test.fillna(0, inplace=True)
+    y = model.predict(test)
     y = [int(_) for _ in list(y)]
     h = [int(_) for _ in list(h)]
+    l = [int(_) for _ in list(l)]
+    print(y)
 
-    dump_value(list(y),list(h),'ga_xgboost_'+key+'_'+bp)
+    name = m + key + '_' + bp
+    dump_value(list(y), list(l), name)

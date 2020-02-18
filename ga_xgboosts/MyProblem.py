@@ -56,7 +56,7 @@ class MyProblem(ea.Problem):  # 继承Problem父类
 
             # 训练模型
             predictor.fit(train_X, train_Y)
-            predictor.save_model('../model/ga_xgboost_24_high')
+            predictor.save_model('../model/ga_xgboost_70_low')
             # 预测结果
             y = predictor.predict(test_X)
             # 计算损失值
@@ -75,7 +75,7 @@ if __name__ == '__main__':
     """================================实例化问题对象==========================="""
     problem = MyProblem()  # 生成问题对象
     # 加载数据
-    train_X, test_X, train_Y, test_Y = load('24', 'high',ratio=0.7)
+    train_X, test_X, train_Y, test_Y = load('70', 'low',ratio=0.7)
 
     """==================================种群设置==============================="""
     Encoding = 'RI'  # 编码方式

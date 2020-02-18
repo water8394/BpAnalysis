@@ -62,7 +62,7 @@ def load_all(name='70'):
         df = df.drop(['name', 'high', 'low'], axis=1)
     else:
         df = df.drop(['high', 'low'], axis=1)
-    return xgb.DMatrix(df), list(high), list(low)
+    return df,xgb.DMatrix(df), list(high), list(low)
 
 
 def dump_value(a, b, name):
@@ -72,6 +72,24 @@ def dump_value(a, b, name):
             inp = str(a[i]) + ',' + str(b[i]) + '\n'
             f.writelines(inp)
 
+
+def load_metric(key='70'):
+    file1 = '../scene/result/ga_xgboost_' + key + '_high.txt'
+    file2 = '../scene/result/ga_xgboost_' + key + '_low.txt'
+    ph, rh, pl, rl = [], [], [], []
+    with open(file1,'r') as f:
+        lines = f.readlines()
+        for line in lines:
+            p,r = line.split(',')
+            ph.append(int(p))
+            rh.append(int(r))
+    with open(file2,'r') as f:
+        lines = f.readlines()
+        for line in lines:
+            p,r = line.split(',')
+            pl.append(int(p))
+            rl.append(int(r))
+    return ph, rh, pl, rl
 
 if __name__ == '__main__':
     load('run')

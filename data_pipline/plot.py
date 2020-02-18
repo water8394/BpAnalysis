@@ -155,11 +155,36 @@ class Plot:
 
     @staticmethod
     def plot_diff(pred_h, real_h, pred_l, real_l):
-        plt.plot(pred_h, 'b', marker='*', markeredgecolor='g', markersize=11)
-        plt.plot(real_h, 'r', marker='o', markeredgecolor='g', markersize=9)
-        plt.plot(pred_l, 'b', marker='*', markeredgecolor='g', markersize=11)
-        plt.plot(real_l, 'r', marker='o', markeredgecolor='g', markersize=9)
+        plt.figure(figsize=(15, 6))
+        plt.plot(pred_h, color='deeppink', marker='*', markersize=7, label='Predict Systolic')
+        plt.plot(real_h, color='dodgerblue', marker='o', markersize=7, label='Real Diastolic')
+        plt.plot(pred_l, color='darkorange', marker='*', markersize=7, label='Predict Systolic')
+        plt.plot(real_l, color='limegreen', marker='o', markersize=7, label='Real Diastolic')
+        plt.legend()
         plt.show()
+
+    @staticmethod
+    def bland_altman_plot(data1, data2):
+        data1 = np.asarray(data1)
+        data2 = np.asarray(data2)
+        mean = np.mean([data1, data2], axis=0)
+        diff = data1 - data2                   # Difference between data1 and data2
+        md = np.mean(diff)                   # Mean of the difference
+        sd = np.std(diff, axis=0)            # Standard deviation of the difference
+
+        print('md:'+str(md))
+        print('sd:'+str(sd))
+        plt.scatter(mean, diff, alpha=0.8)
+        plt.axhline(md, color='dodgerblue', linestyle='--', alpha=0.7)
+        plt.axhline(md + 1.96*sd, color='tomato', linestyle='--', alpha=0.7)
+        plt.axhline(md - 1.96*sd, color='tomato', linestyle='--', alpha=0.7)
+
+    @staticmethod
+    def ba_plot(data1, data2, data3, data4):
+        Plot.bland_altman_plot(data1, data2)
+        Plot.bland_altman_plot(data3, data4)
+        plt.show()
+
 
 if __name__ == '__main__':
     list = [1, 3, 2, 5, 6, 8, 3, 1]
