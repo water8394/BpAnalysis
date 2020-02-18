@@ -5,10 +5,9 @@ from sklearn.metrics import mean_absolute_error
 from sklearn.model_selection import train_test_split
 
 from calculate import *
-from data_pipline.model import load_data
 
 from calculate.mathIndicator import get_mae
-
+from calculate.load import load
 class MyProblem(ea.Problem):  # 继承Problem父类
     def __init__(self):
         name = 'MyProblem'  # 初始化name（函数名称，可以随意设置）
@@ -57,6 +56,7 @@ class MyProblem(ea.Problem):  # 继承Problem父类
 
             # 训练模型
             predictor.fit(train_X, train_Y)
+            predictor.save_model('../model/ga_xgboost_24_high')
             # 预测结果
             y = predictor.predict(test_X)
             # 计算损失值
@@ -75,9 +75,7 @@ if __name__ == '__main__':
     """================================实例化问题对象==========================="""
     problem = MyProblem()  # 生成问题对象
     # 加载数据
-    df = load_data()
-    train_X, test_X, train_Y, test_Y = train_test_split(
-        df[['bf', 'bs', 'sd', 'df', 'sf', 'rr', 'asd', 'asf', 'ptt']], df['high'], test_size=0.3)
+    train_X, test_X, train_Y, test_Y = load('24', 'high',ratio=0.7)
 
     """==================================种群设置==============================="""
     Encoding = 'RI'  # 编码方式
