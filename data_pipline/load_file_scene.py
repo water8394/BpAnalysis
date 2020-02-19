@@ -1,7 +1,5 @@
-import json
-
 from data_pipline import *
-
+import json
 
 class SensorData:
 
@@ -11,22 +9,23 @@ class SensorData:
 
         self._load_record()
 
-    def _load(self, path, form='excel'):
+    def _load(self, path, form='txt'):
         self.data = self.load(path, form)
 
     def _load_record(self):
-        self.record = pd.read_table('../old/record/test_log', header=None)
-        self.record.columns = ['idx', 'name', 'file', 'h1', 'l1', 'h2', 'l2']
+        self.record = pd.read_excel('../scene/记录表.xlsx')
 
     @staticmethod
-    def load(path, form='excel'):
+    def load(path, form='txt'):
 
         data = pd.DataFrame
 
         if form == 'txt':
             data = pd.read_table(path, header=None, sep=',')
         elif form == 'excel':
-            data = pd.read_excel(path)
+            data = pd.read_excel(path, header=None)
+
+        data.columns = ['ir1', 'red1', 'ir2', 'red2']
 
         return data
 

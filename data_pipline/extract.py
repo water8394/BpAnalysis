@@ -132,8 +132,8 @@ if __name__ == '__main__':
     """
     找 波谷点
     """
-    for k in ids:
-        d = sensor.load_by_number(k, 'regular')
-        d = reverse(d)
-        pks = find_peek(d.ir1)
-        save_peeks(pks, k, default='vally_peak_index')
+    # for k in ids:
+    #     d = sensor.load_by_number(k, 'regular')
+    #     d = reverse(d)
+    #     pks = find_peek(d.ir1)
+    #     save_peeks(pks, k, default='vally_peak_index')

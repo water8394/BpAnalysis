@@ -1,12 +1,16 @@
-norm xbg 24 high
-norm xbg 24 low
-norm xbg 70 high
-norm xbg 70 low
-norm liner 24 high
-norm liner 24 low
-norm liner 70 high
-norm liner 70 low
-norm svr 24 high
-norm svr 24 low
-norm svr 70 high
-norm svr 70 low
+bp 24 high -7.24 2.46 5.73
+bp 24 low -1.76 2.67 2.78
+bp 70 high 8.25 3.712 5.03
+bp 70 low 4.81 2.24 3.32
+liner 24 high 6.75 4.603 7.38
+liner 24 low 3.143 5.239 6.11
+liner 70 high 6.8 3.187 6.989
+liner 70 low -2.125 6.0506 6.051
+svr 24 high 12.25 5.449 12.907
+svr 24 low 2.762 5.6139 6.2569
+svr 70 high 8.688 9.856 7.2661
+svr 70 low 4.031 8.103 9.112
+ga_xgboost 24 high 1.714 1.982 3.164
+ga_xgboost 24 low -0.762 0.958 2.055
+ga_xgboost 70 high -1.239 2.754 4.913
+ga_xgboost 70 low -0.859 1.265 1.335

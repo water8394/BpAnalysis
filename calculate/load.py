@@ -73,8 +73,8 @@ def dump_value(a, b, name):
             f.writelines(inp)
 
 
-def load_metric(key='70', model='ga_xgboost_'):
-    base = '../scene/result/norm_' + model + '_'
+def load_metric(key='70', model='ga_xgboost'):
+    base = '../scene/result/' + model + '_'
     file1 = base + key + '_high.txt'
     file2 = base + key + '_low.txt'
     ph, rh, pl, rl = [], [], [], []
@@ -92,14 +92,14 @@ def load_metric(key='70', model='ga_xgboost_'):
             rl.append(int(r))
 
     # 去除异常值
-    i1,i2 = [],[]
-    for i in range(len(ph)):
-        if abs(ph[i]-rh[i]) > 30:
-            i1.append(ph[i])
-            i2.append(rh[i])
-    for k,d in zip(i1,i2):
-        ph.remove(k)
-        rh.remove(d)
+    # i1, i2 = [],[]
+    # for i in range(len(ph)):
+    #     if abs(ph[i]-rh[i]) > 30:
+    #         i1.append(ph[i])
+    #         i2.append(rh[i])
+    # for k,d in zip(i1,i2):
+    #     ph.remove(k)
+    #     rh.remove(d)
 
     return ph, rh, pl, rl
 

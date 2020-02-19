@@ -8,6 +8,10 @@ from load_file import SensorData
 class Plot:
 
     @staticmethod
+    def get_colors():
+        return ['deeppink','dodgerblue','darkorange','limegreen']
+
+    @staticmethod
     def init_plot():
         plt.figure(figsize=(15, 6))
 
@@ -157,8 +161,8 @@ class Plot:
     def plot_diff(pred_h, real_h, pred_l, real_l):
         plt.figure(figsize=(15, 6))
         plt.plot(pred_h, color='deeppink', marker='*', markersize=7, label='Predict Systolic')
-        plt.plot(real_h, color='dodgerblue', marker='o', markersize=7, label='Real Diastolic')
-        plt.plot(pred_l, color='darkorange', marker='*', markersize=7, label='Predict Systolic')
+        plt.plot(real_h, color='dodgerblue', marker='o', markersize=7, label='Real Systolic')
+        plt.plot(pred_l, color='darkorange', marker='*', markersize=7, label='Predict Diastolic')
         plt.plot(real_l, color='limegreen', marker='o', markersize=7, label='Real Diastolic')
         plt.legend()
         plt.show()
@@ -168,21 +172,40 @@ class Plot:
         data1 = np.asarray(data1)
         data2 = np.asarray(data2)
         mean = np.mean([data1, data2], axis=0)
-        diff = data1 - data2                   # Difference between data1 and data2
-        md = np.mean(diff)                   # Mean of the difference
-        sd = np.std(diff, axis=0)            # Standard deviation of the difference
+        diff = data1 - data2  # Difference between data1 and data2
+        md = np.mean(diff)  # Mean of the difference
+        sd = np.std(diff, axis=0)  # Standard deviation of the difference
 
-        print('md:'+str(md))
-        print('sd:'+str(sd))
+        print('md:' + str(md))
+        print('sd:' + str(sd))
         plt.scatter(mean, diff, alpha=0.8)
         plt.axhline(md, color='dodgerblue', linestyle='--', alpha=0.7)
-        plt.axhline(md + 1.96*sd, color='tomato', linestyle='--', alpha=0.7)
-        plt.axhline(md - 1.96*sd, color='tomato', linestyle='--', alpha=0.7)
+        plt.axhline(md + 1.96 * sd, color='tomato', linestyle='--', alpha=0.7)
+        plt.axhline(md - 1.96 * sd, color='tomato', linestyle='--', alpha=0.7)
 
     @staticmethod
     def ba_plot(data1, data2, data3, data4):
         Plot.bland_altman_plot(data1, data2)
         Plot.bland_altman_plot(data3, data4)
+        plt.show()
+
+    @staticmethod
+    def bar_plot(td):
+        colors = Plot.get_colors()
+        names = ['liner', 'svr', 'bp', 'ga_xgboost']
+        x = np.arange(3)
+        width = 0.12
+        fig, ax = plt.subplots()
+
+        for i, name in enumerate(names):
+            value_set = list(td[td['model'] == name].iloc[0])[-3:]
+            value_set = [abs(_) for _ in value_set]
+            ax.bar(x + 2 * width - i * width, value_set, width * 0.8, label=name.upper())
+
+        labels = ['MAE', 'SD', 'RSME']
+        ax.set_xticklabels(labels)
+        ax.set_xticks(x)
+        plt.legend()
         plt.show()
 
 
