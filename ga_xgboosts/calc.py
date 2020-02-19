@@ -8,6 +8,13 @@ import numpy as np
 """
 
 
+def remove_max(d1, d2):
+    r1, r2 = [], []
+    for i in range(len(d1)):
+        if abs(d1[i]-d2[i]) < 10:
+            r1.append(d1[i])
+            r2.append(d2[i])
+    return r1, r2
 
 def rmse(predictions, targets):
     return np.sqrt(((predictions - targets) ** 2).mean())
@@ -19,7 +26,11 @@ if __name__ == '__main__':
     models = ['xgb']
 
     ph, rh, pl, rl = load_metric('24')
-    Plot.plot_diff(ph, rh, pl, rl)
+    #Plot.plot_diff(ph, rh, pl, rl)
+    ph, rh = remove_max(ph, rh)
+    pl, rl = remove_max(pl, rl)
+    Plot.bland_altman_plot(ph, rh)
+    Plot.bland_altman_plot(pl, rl)
 
     # for key in keys:
     #     for model in models:

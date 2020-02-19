@@ -178,10 +178,12 @@ class Plot:
 
         print('md:' + str(md))
         print('sd:' + str(sd))
-        plt.scatter(mean, diff, alpha=0.8)
+        plt.scatter(mean, diff, alpha=0.8, color='deeppink')
         plt.axhline(md, color='dodgerblue', linestyle='--', alpha=0.7)
         plt.axhline(md + 1.96 * sd, color='tomato', linestyle='--', alpha=0.7)
         plt.axhline(md - 1.96 * sd, color='tomato', linestyle='--', alpha=0.7)
+
+        plt.show()
 
     @staticmethod
     def ba_plot(data1, data2, data3, data4):
