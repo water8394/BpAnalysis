@@ -1,5 +1,5 @@
 import math
-
+import numpy as np
 
 def transfer_list(records_real, records_predict):
     return list(records_real), list(records_predict)
@@ -37,3 +37,13 @@ def get_mae(records_real, records_predict):
         return sum([abs(x - y) for x, y in zip(records_real, records_predict)]) / len(records_real)
     else:
         return 10000
+
+
+def get_sd(records_real, records_predict):
+    """
+    sd
+    """
+    records_real = np.asarray(records_real)
+    records_predict = np.asarray(records_predict)
+    diff = records_real - records_predict
+    return np.std(diff, axis=0)

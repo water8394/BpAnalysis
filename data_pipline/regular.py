@@ -1,4 +1,4 @@
-from load_file import SensorData
+from load_file_old import SensorData
 from plot import Plot
 from pre_process import *
 from pre_process import _scale

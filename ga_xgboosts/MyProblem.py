@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 import geatpy as ea
 import xgboost as xgb
-from sklearn.metrics import mean_absolute_error
-from sklearn.model_selection import train_test_split
 
 from calculate import *
-
-from calculate.mathIndicator import get_mae
 from calculate.load import load
+from calculate.mathIndicator import get_mae,get_sd,get_rmse
+
+
 class MyProblem(ea.Problem):  # 继承Problem父类
     def __init__(self):
         name = 'MyProblem'  # 初始化name（函数名称，可以随意设置）
@@ -56,16 +55,12 @@ class MyProblem(ea.Problem):  # 继承Problem父类
 
             # 训练模型
             predictor.fit(train_X, train_Y)
-            predictor.save_model('../model/ga_xgboost_70_low')
+            # predictor.save_model('../model/ga_xgboost_70_low')
             # 预测结果
             y = predictor.predict(test_X)
             # 计算损失值
-            #loss = mean_absolute_error(y, test_Y)
-            loss = get_mae(y, test_Y)
-            print("================================")
-            print("predict: " + str(list(y)))
-            print("real: " + str(list(test_Y)))
-            print("================================")
+            loss = get_rmse(y, test_Y)
+
             res.append([loss])
 
         pop.ObjV = np.array(res)  # 赋值给pop种群对象的ObjV属性
@@ -75,16 +70,18 @@ if __name__ == '__main__':
     """================================实例化问题对象==========================="""
     problem = MyProblem()  # 生成问题对象
     # 加载数据
-    train_X, test_X, train_Y, test_Y = load('70', 'low',ratio=0.7)
+    key = '70'
+    bp = 'low'
+    train_X, test_X, train_Y, test_Y = load(key, bp, ratio=0.3)
 
     """==================================种群设置==============================="""
     Encoding = 'RI'  # 编码方式
-    NIND = 30  # 种群规模
+    NIND = 50  # 种群规模
     Field = ea.crtfld(Encoding, problem.varTypes, problem.ranges, problem.borders)  # 创建区域描述器
     population = ea.Population(Encoding, Field, NIND)  # 实例化种群对象（此时种群还没被初始化，仅仅是完成种群对象的实例化）
     """================================算法参数设置============================="""
     myAlgorithm = ea.soea_DE_rand_1_L_templet(problem, population)  # 实例化一个算法模板对象
-    myAlgorithm.MAXGEN = 10  # 最大进化代数
+    myAlgorithm.MAXGEN = 50  # 最大进化代数
     myAlgorithm.mutOper.F = 0.5  # 差分进化中的参数F
     myAlgorithm.recOper.XOVR = 0.7  # 重组概率
     """===========================调用算法模板进行种群进化======================="""
@@ -101,6 +98,3 @@ if __name__ == '__main__':
     print('最优的一代是第 %s 代' % (best_gen + 1))
     print('评价次数：%s' % (myAlgorithm.evalsNum))
     print('时间已过 %s 秒' % (myAlgorithm.passTime))
-
-
-

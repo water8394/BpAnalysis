@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 from data_pipline import *
-from load_file import SensorData
+from load_file_old import SensorData
 
 
 class Plot:
@@ -183,7 +183,7 @@ class Plot:
         plt.axhline(md + 1.96 * sd, color='tomato', linestyle='--', alpha=0.7)
         plt.axhline(md - 1.96 * sd, color='tomato', linestyle='--', alpha=0.7)
 
-        plt.show()
+        #plt.show()
 
     @staticmethod
     def ba_plot(data1, data2, data3, data4):
