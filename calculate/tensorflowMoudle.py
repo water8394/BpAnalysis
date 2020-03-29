@@ -7,6 +7,11 @@ from commons.utils import measure_difference
 from sklearn.metrics import mean_absolute_error
 from sklearn.model_selection import train_test_split
 
+"""
+神经网络模型
+
+"""
+
 rng = numpy.random
 
 df = load()

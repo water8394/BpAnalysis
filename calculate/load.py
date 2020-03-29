@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from data_pipline import *
 from load_file import SensorData
 
+# 加载指标值
 
 def create_table(name):
     if name == '70':

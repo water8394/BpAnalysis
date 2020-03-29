@@ -1,7 +1,10 @@
 from load_file_old import SensorData
 import json
 
+"""
+根据计算出来的 特征点进一步得到指标
 
+"""
 def cal_ptt(pks_index, s_index):
     ret = []
     for _val in s_index:

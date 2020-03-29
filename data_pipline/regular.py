@@ -3,6 +3,9 @@ from plot import Plot
 from pre_process import *
 from pre_process import _scale
 
+# 主要是预处理的实现过程
+# 用到的函数是 commons/pro_process [预处理过程] &&  commons/wavelet [小波滤波]
+
 if __name__ == '__main__':
 
     sensor = SensorData()

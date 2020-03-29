@@ -2,6 +2,12 @@ import json
 
 from data_pipline import *
 
+"""
+SensorData  文件操作类
+
+将传感器存储的文件转换成 DataFrame
+
+"""
 
 class SensorData:
 

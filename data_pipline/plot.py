@@ -4,6 +4,13 @@ from scipy import stats
 from data_pipline import *
 from load_file_old import SensorData
 
+"""
+为了绘制波形
+方便实时观察
+
+已经对一些中间过程展示
+"""
+
 
 class Plot:
 
@@ -28,6 +35,7 @@ class Plot:
 
     @staticmethod
     def figture_update(figture, x_str, y_str, title, index_data):
+        # 更新图的坐标
         plt.xlabel(x_str, fontsize=12)
         plt.ylabel(y_str, fontsize=12)
         x_ticks = [x for x in range(len(index_data)) if x % 400 == 0]
@@ -37,12 +45,15 @@ class Plot:
 
     @staticmethod
     def plot_sigle_peak(df, x):
+        #  绘制单路波形峰值
         Plot.init_plot()
         Plot._plot_single_data_peak(df, x)
         plt.show()
 
     @staticmethod
     def plot_all_peak(df1, df2, x1, x2):
+        # 绘制所有峰值点
+
         Plot.init_plot()
         Plot._plot_single_data_peak(df1, x1)
         Plot._plot_single_data_peak(df2, x2, c='g', m='r^')
@@ -51,7 +62,7 @@ class Plot:
     @staticmethod
     def _plot_single_data_peak(df, x, c='b', m='r*'):
 
-        # plt.plot(df, c=c)
+        #  df 就是 ir的数据， x 就是峰值点数据
         y = []
         if type(x) is pd.DataFrame:
             x = x['ir1'].values.tolist()
@@ -64,6 +75,7 @@ class Plot:
 
     @staticmethod
     def plot_points(data, peak_index, mid_peak_index, vally_peak_index):
+        # plot 所有的特征点
         Plot.init_plot()
         Plot._plot_single_data_peak(data, peak_index, m='r*')
         Plot._plot_single_data_peak(data, mid_peak_index, m='g^')
@@ -72,6 +84,7 @@ class Plot:
 
     @staticmethod
     def plot_feature_point(data, point_list):
+        # 绘制波形特征点
         Plot.init_plot()
         plt.plot(data)
         x1, x2, x3, x4 = [], [], [], []
@@ -89,6 +102,7 @@ class Plot:
 
     @staticmethod
     def plot_single_metric(metric, step=10, color='bm'):
+        # 绘制一个指标 柱状图
         skew = 'Skew: ' + str(round(float(stats.skew(metric)), 2))
         _mean = np.mean(metric)
         _median = np.median(metric)
@@ -169,6 +183,7 @@ class Plot:
 
     @staticmethod
     def bland_altman_plot(data1, data2):
+        # 绘制 ba图
         data1 = np.asarray(data1)
         data2 = np.asarray(data2)
         mean = np.mean([data1, data2], axis=0)

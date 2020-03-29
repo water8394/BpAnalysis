@@ -2,6 +2,9 @@ from load_file_old import SensorData
 from plot import Plot
 from pre_process import *
 
+# 提取峰值点
+# 包括 波峰 重播波波峰 波谷
+
 
 def find_peek(data):
     """

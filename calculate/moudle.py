@@ -12,6 +12,17 @@ import pickle
 from sklearn.externals import joblib
 from load import load
 
+
+""""
+训练不同机器学习模型
+ga-xgboost
+
+lr / svm / bp 等等各种不同的算法
+
+训练并保存模型
+"""
+
+
 # key = '24'
 # bp = 'high'
 keys = ['70']

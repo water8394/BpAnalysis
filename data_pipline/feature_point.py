@@ -3,6 +3,16 @@ from load_file_old import SensorData
 from plot import *
 
 
+"""
+通过峰值点索引来计算特征点
+3路峰值点索引 --- 转为 单波形的特征点集合
+
+【峰值索引】
+【重播波索引】 ----> 起始点/终止点/波峰点/重播波点
+【波谷索引】
+
+"""
+
 def extract_usage_point(peak_index, mid_peak_index, vally_peak_index):
     """
     提取可用的特征点

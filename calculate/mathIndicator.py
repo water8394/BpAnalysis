@@ -1,6 +1,15 @@
 import math
 import numpy as np
 
+
+"""
+这个是一个统计学文件
+
+专门计算各种不同的统计学量  
+如 mse / rmse / mae / sd
+
+"""
+
 def transfer_list(records_real, records_predict):
     return list(records_real), list(records_predict)
 
