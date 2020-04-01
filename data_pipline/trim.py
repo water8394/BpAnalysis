@@ -1,10 +1,9 @@
-from load_file_old import SensorData
+from load_file import SensorData
 from plot import Plot
 
 """"
     修剪数据片段，删除不准确的部分
 """
-
 
 def remove_part(data, r):
     start = r[0]
@@ -16,15 +15,15 @@ def remove_part(data, r):
 
 if __name__ == '__main__':
     sensor = SensorData()
-    numbers = sensor.get_record_number()
 
-    k = 25
+    k = 27
     re_save = 0  # 0: origin  / 1: trim
-    d = sensor.load_by_number(k, default='regular')
+    d = sensor.load_by_number(k, default='data')
 
+    print(d.ir1)
     if not re_save:
         Plot.show(d.ir1, d.ir2)
     else:
-        d2 = remove_part(d, [0, 5500])
+        d2 = remove_part(d, [0, 100])
         #Plot.show(d2.ir1, d2.ir2)
-        sensor.resave_file(k, d2, default='regular')
+        sensor.resave_file(k, d2, default='data')
