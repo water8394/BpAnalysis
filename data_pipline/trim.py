@@ -16,8 +16,8 @@ def remove_part(data, r):
 if __name__ == '__main__':
     sensor = SensorData()
 
-    k = 27
-    re_save = 0  # 0: origin  / 1: trim
+    k = 44
+    re_save = 1  # 0: origin  / 1: trim
     d = sensor.load_by_number(k, default='data')
 
     print(d.ir1)
