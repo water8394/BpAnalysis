@@ -1,7 +1,5 @@
-from data_pipline import *
 from load_file import SensorData
 from plot import *
-
 
 """
 通过峰值点索引来计算特征点
@@ -13,20 +11,44 @@ from plot import *
 
 """
 
-def extract_usage_point(peak_index, mid_peak_index, vally_peak_index):
+
+def extract_usage_point(peak_index, mid_peak_index, vally_peak_index, k=1):
     """
     提取可用的特征点
     """
+    sensor = SensorData()
+    d = list(sensor.load_by_number(k, 'regular').ir1)
+
     ret = []
-    for i in range(len(vally_peak_index)-1):
+    for i in range(len(vally_peak_index) - 1):
         start = vally_peak_index.at[i, 'ir1']
-        end = vally_peak_index.at[i+1, 'ir1']
+        end = vally_peak_index.at[i + 1, 'ir1']
         _range = [start, end]
         peak = find_match_point(peak_index, _range)
         mid = find_match_point(mid_peak_index, _range)
-        if peak != -1 and mid != -1:
+        print([start, peak, -1, end])
+        if peak == -1 and mid == -1:
+            ret.append([-1, -1, -1, -1])
+        elif vaild_middle(peak, mid, end, d) == -1:
+            ret.append([start, peak, -1, end])
+        else:
             ret.append([start, peak, mid, end])
     return ret
+
+
+def vaild_middle(peak, middle, end, d):
+    if middle == -1:
+        return -1
+    if d[peak] < d[middle]:
+        return -1
+    if peak > middle:
+        return -1
+    diff = (middle - peak) / (end - middle)
+    print(diff)
+    if 0.8 > diff or diff > 3:
+        return -1
+
+    return 1
 
 
 def find_match_point(data, _range):
@@ -51,21 +73,15 @@ def extract_feature_point(k):
     sensor = SensorData()
     d = sensor.load_by_number(k, default='regular')
     pks, mid_pks, vl_pks = sensor.load_all_index(k)
-    #Plot.plot_points(d.ir1, pks, mid_pks, vl_pks)
-    points = extract_usage_point(pks, mid_pks, vl_pks)
+    # Plot.plot_points(d.ir1, pks, mid_pks, vl_pks)
+    points = extract_usage_point(pks, mid_pks, vl_pks, k)
     Plot.plot_feature_point(d.ir1, points)
-    sensor.save_all_indicators(k, points)
-
+    # sensor.save_all_indicators(k, points)
 
 
 if __name__ == '__main__':
     sensor = SensorData()
-    ids = sensor.get_record_number()
-    for k in ids:
-        print('current stage: ' + str(k))
-        d = sensor.load_by_number(k, default='regular')
-        pks, mid_pks, vl_pks = sensor.load_all_index(k)
-        #Plot.plot_points(d.ir1, pks, mid_pks, vl_pks)
-        points = extract_usage_point(pks, mid_pks, vl_pks)
-        #Plot.plot_feature_point(d.ir1, points)
-        sensor.save_all_indicators(k, points)
+
+    number = 41
+
+    extract_feature_point(number)
