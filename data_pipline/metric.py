@@ -40,7 +40,7 @@ def dump_metrics_to_json(metrics, file):
 
 def extract_metric(k):
     sensor = SensorData()
-    print('current metric: ' + str(k))
+
     d = sensor.load_by_number(k, default='regular')
     pks = sensor.load_peek_index(k).ir2
 
