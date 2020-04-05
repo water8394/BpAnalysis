@@ -5,6 +5,8 @@ from data_pipline import *
 from load_file import SensorData
 
 # 加载指标值
+# 70是代表老数据  新数据统一用24
+
 
 def create_table(name):
     if name == '70':
@@ -56,14 +58,15 @@ def load(name='70', bp='high', ratio=0.5):
         return train_X, test_X, train_Y, test_Y
 
 
-def load_all(name='70'):
+def load_all(name='24'):
     df = create_table(name)
     high, low = df.loc[:, 'high'], df.loc[:, 'low']
     if name == '70':
         df = df.drop(['name', 'high', 'low'], axis=1)
     else:
         df = df.drop(['high', 'low'], axis=1)
-    return df,xgb.DMatrix(df), list(high), list(low)
+    df.fillna(0, inplace=True)
+    return df, xgb.DMatrix(df), list(high), list(low)
 
 
 def dump_value(a, b, name):

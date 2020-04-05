@@ -1,17 +1,15 @@
-from load_file import SensorData
-from pre_process import *
-from pre_process import _scale
-from plot import Plot
-from regular import pre_process
-from extract import *
-from metric import extract_metric
-from feature_point import extract_feature_point
 from extract import extract_all_peaks
+from feature_point import extract_feature_point
+from metric import extract_metric
+from model import cal_bp
+from regular import pre_process
+
 """
 数据预处理 && 提取特征值 主类
 """
-def main(k):
 
+
+def main(k):
     """
      预处理数据
     """
@@ -35,10 +33,9 @@ def main(k):
     """
      使用模型预测结果
     """
-
+    cal_bp(k, 'high')
 
 
 if __name__ == '__main__':
-
-    number = 44
+    number = 42
     main(number)

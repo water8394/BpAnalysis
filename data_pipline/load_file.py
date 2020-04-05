@@ -1,6 +1,7 @@
 from data_pipline import *
 import json
-
+import xgboost as xgb
+from sklearn.model_selection import train_test_split
 """
 读取数据并转为 Dataframe
 
@@ -128,6 +129,30 @@ class SensorData:
         with open(path, 'r') as f:
             data = json.load(f)
         return data
+
+
+    @staticmethod
+    def load_metric(k):
+        sensor=SensorData()
+        record = sensor.record
+        metric_name = ['bf', 'bs', 'sd', 'df', 'sf', 'rr', 'asd', 'asf', 'ptt']
+        columns = ['bf', 'bs', 'sd', 'df', 'sf', 'rr', 'asd', 'asf', 'ptt', 'high', 'low']
+        df = pd.DataFrame(columns=columns)
+        metric = sensor.load_json_metric(k)
+        high, low = int(record[record['number'] == k]['high']), int(record[record['number'] == k]['low'])
+        l = []
+        for name in metric_name:
+            l.append(np.mean(metric[name]))
+        l.append(high)
+        l.append(low)
+        insert_row = dict(zip(columns, l))
+        df.loc[df.shape[0]] = insert_row
+        df['ptt'] = [abs(_) for _ in list(df['ptt'])]
+        high, low = df.loc[:, 'high'], df.loc[:, 'low']
+        df = df.drop(['high', 'low'], axis=1)
+        df.fillna(0, inplace=True)
+        return df, xgb.DMatrix(df), list(high), list(low)
+
 
 
 if __name__ == '__main__':
