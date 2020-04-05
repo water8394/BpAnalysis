@@ -1,4 +1,3 @@
-from load_file import SensorData
 from plot import *
 
 """
@@ -16,6 +15,7 @@ def extract_usage_point(peak_index, mid_peak_index, vally_peak_index, k=1):
     """
     提取可用的特征点
     """
+    from load_file import SensorData
     sensor = SensorData()
     d = list(sensor.load_by_number(k, 'regular').ir1)
 
@@ -26,7 +26,6 @@ def extract_usage_point(peak_index, mid_peak_index, vally_peak_index, k=1):
         _range = [start, end]
         peak = find_match_point(peak_index, _range)
         mid = find_match_point(mid_peak_index, _range)
-        print([start, peak, -1, end])
         if peak == -1 and mid == -1:
             ret.append([-1, -1, -1, -1])
         elif vaild_middle(peak, mid, end, d) == -1:
@@ -37,6 +36,9 @@ def extract_usage_point(peak_index, mid_peak_index, vally_peak_index, k=1):
 
 
 def vaild_middle(peak, middle, end, d):
+    """
+    验证重播波点是否正确
+    """
     if middle == -1:
         return -1
     if d[peak] < d[middle]:
@@ -44,8 +46,7 @@ def vaild_middle(peak, middle, end, d):
     if peak > middle:
         return -1
     diff = (middle - peak) / (end - middle)
-    print(diff)
-    if 0.8 > diff or diff > 3:
+    if diff < 0.25 or diff > 3:
         return -1
 
     return 1
@@ -80,8 +81,9 @@ def extract_feature_point(k):
 
 
 if __name__ == '__main__':
-    sensor = SensorData()
+    from load_file import SensorData
 
-    number = 41
+    sensor = SensorData()
+    number = 49
 
     extract_feature_point(number)
