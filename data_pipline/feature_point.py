@@ -76,7 +76,7 @@ def extract_feature_point(k):
     # Plot.plot_points(d.ir1, pks, mid_pks, vl_pks)
     points = extract_usage_point(pks, mid_pks, vl_pks, k)
     Plot.plot_feature_point(d.ir1, points)
-    # sensor.save_all_indicators(k, points)
+    sensor.save_all_indicators(k, points)
 
 
 if __name__ == '__main__':
