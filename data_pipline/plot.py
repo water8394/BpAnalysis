@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 from data_pipline import *
-from load_file_old import SensorData
+from load_file_dup import SensorData
 
 """
 为了绘制波形
@@ -60,7 +60,7 @@ class Plot:
         plt.show()
 
     @staticmethod
-    def _plot_single_data_peak(df, x, c='b', m='r*'):
+    def _plot_single_data_peak(df, x, c='b', m='r*', label='None'):
 
         #  df 就是 ir的数据， x 就是峰值点数据
         y = []
@@ -71,7 +71,7 @@ class Plot:
         elif type(x) is list:
             x = [_ for _ in x if _ != -1]
             y = [df[_] for _ in x]
-        plt.scatter(x, y, c=m[0], marker=m[1], s=140)
+        plt.scatter(x, y, c=m[0], marker=m[1], s=140, label=label)
 
     @staticmethod
     def plot_points(data, peak_index, mid_peak_index, vally_peak_index):
@@ -93,11 +93,11 @@ class Plot:
             x2.append(points[1])
             x3.append(points[2])
             x4.append(points[3])
-        Plot._plot_single_data_peak(data, x1, m='r*')
-        Plot._plot_single_data_peak(data, x2, m='g^')
-        Plot._plot_single_data_peak(data, x3, m='mP')
-        Plot._plot_single_data_peak(data, x4, m='r*')
-
+        Plot._plot_single_data_peak(data, x1, m='r*', label='vally')
+        Plot._plot_single_data_peak(data, x2, m='g^', label='peak')
+        Plot._plot_single_data_peak(data, x3, m='mP', label='middle')
+        Plot._plot_single_data_peak(data, x4, m='r*', label='vally')
+        plt.legend()
         plt.show()
 
     @staticmethod

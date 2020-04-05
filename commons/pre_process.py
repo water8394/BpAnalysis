@@ -56,7 +56,8 @@ def filter(table):
     ir2 = ir2[0:min_table_length]
     red1 = red1[0:min_table_length]
     red2 = red2[0:min_table_length]
-
+    ################################################
+    # 重新保存
     new_table = pd.DataFrame(columns=['ir1', 'red1', 'ir2', 'red2'])
 
     new_table.ir1 = ir1
@@ -82,12 +83,13 @@ def reverse(data):
     return data
 
 
-def mean_filter(data):
+def mean_filter(data, mean_value=30):
     """
     均值滤波
     """
-    data = data.rolling(window=30).mean()
-    return data[30:]
+    data = data.rolling(window=mean_value).mean()[mean_value:]
+    data.index = range(data.shape[0])
+    return data
 
 
 def scale(data):

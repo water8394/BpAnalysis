@@ -1,5 +1,5 @@
 from data_pipline import *
-from load_file_old import SensorData
+from load_file import SensorData
 from plot import *
 
 
@@ -41,6 +41,21 @@ def find_match_point(data, _range):
     if len(ret) == 1:
         return ret[0]
     return -1
+
+
+def extract_feature_point(k):
+    """
+    提取特征点并保存
+    """
+    from load_file import SensorData
+    sensor = SensorData()
+    d = sensor.load_by_number(k, default='regular')
+    pks, mid_pks, vl_pks = sensor.load_all_index(k)
+    #Plot.plot_points(d.ir1, pks, mid_pks, vl_pks)
+    points = extract_usage_point(pks, mid_pks, vl_pks)
+    Plot.plot_feature_point(d.ir1, points)
+    sensor.save_all_indicators(k, points)
+
 
 
 if __name__ == '__main__':

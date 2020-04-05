@@ -104,6 +104,27 @@ def save_peeks(data, k, default='peak_index'):
         f.truncate()
 
 
+def extract_all_peaks(k):
+    sensor = SensorData()
+    d = sensor.load_by_number(k, 'regular')
+    pks = find_peek(d.ir1)
+    save_peeks(pks, k, default='peak_index')
+    # 寻找两路峰值点
+    pki = sensor.load_peek_index(k)
+    col = d.ir2
+    peeks = find_peek_by_other(col, pki)
+    val = zip(pki['ir1'].values.tolist(), peeks)
+    save_peeks(val, k)
+    # 寻找重播波峰值点
+    pks = sensor.load_peek_index(k)
+    mid_pks = find_mid_peek(d.ir1, pks['ir1'].values.tolist())
+    save_peeks(mid_pks, k, default='mid_peak_index')
+    # 寻找波谷点
+    d = reverse(d)
+    pks = find_peek(d.ir1)
+    save_peeks(pks, k, default='vally_peak_index')
+
+
 if __name__ == '__main__':
     sensor = SensorData()
     ids = sensor.get_record_number()

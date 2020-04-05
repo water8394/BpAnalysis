@@ -1,4 +1,4 @@
-from load_file_old import SensorData
+from load_file_dup import SensorData
 from plot import *
 
 if __name__ == '__main__':

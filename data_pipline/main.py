@@ -2,61 +2,43 @@ from load_file import SensorData
 from pre_process import *
 from pre_process import _scale
 from plot import Plot
+from regular import pre_process
 from extract import *
-
+from metric import extract_metric
+from feature_point import extract_feature_point
+from extract import extract_all_peaks
 """
 数据预处理 && 提取特征值 主类
 """
-
-
 def main(k):
-    sensor = SensorData()
 
-    df = sensor.load_by_number(k, 'data')
-
+    """
+     预处理数据
+    """
+    pre_process(k)
     ###################################################################
-    # 预处理数据
-    df = remove_dc(df)  # 去除dc分量
-    df = filter(df)  # 滤波
-    df = scale(df)  # 放缩
-    df = mean_filter(df)  # 均值滤波
-    #df = reverse(df)  # 反转波形
+    """
+     寻找所有的峰值特征点并保存成文件
+    """
+    extract_all_peaks(k)
     ###################################################################
-    # 显示滤波结果
-    plt.figure(figsize=(10, 8))
-    fig1 = plt.subplot(111)
-    plt.plot(df.ir2, c='r')
-    Plot.figture_update(fig1, 'Time (s)', 'Amplitude', 'Pre-process PPG signal', df.ir1)
-    plt.subplots_adjust(wspace=0, hspace=0.5)
-    plt.show()
+    """
+     计算每一组波形的4个定位特征点
+    """
+    extract_feature_point(k)
     ###################################################################
-    # 存储 预处理 文件
-    sensor.resave_file(k, df, 'regular')
+    """
+     通过峰值点计算所有的特征值
+    """
+    extract_metric(k)
     ###################################################################
-    # 寻找一路峰值点
-    d = sensor.load_by_number(k, 'regular')
-    pks = find_peek(d.ir1)
-    save_peeks(pks, k, default='peak_index')
-    # 寻找两路峰值点
-    pki = sensor.load_peek_index(k)
-    col = d.ir2
-    peeks = find_peek_by_other(col, pki)
-    val = zip(pki['ir1'].values.tolist(), peeks)
-    save_peeks(val, k)
-    # 寻找重播波峰值点
-    pks = sensor.load_peek_index(k)
-    mid_pks = find_mid_peek(d.ir1, pks['ir1'].values.tolist())
-    Plot.plot_sigle_peek(d.ir1, mid_pks)
-    save_peeks(mid_pks, k, default='mid_peak_index')
-    # 寻找波谷点
-    d = reverse(d)
-    pks = find_peek(d.ir1)
-    save_peeks(pks, k, default='vally_peak_index')
-    ###################################################################
+    """
+     使用模型预测结果
+    """
 
 
 
 if __name__ == '__main__':
 
-    number = 27
+    number = 44
     main(number)

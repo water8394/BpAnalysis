@@ -5,7 +5,6 @@ def wavelet_filter(wave):
     """
     小波变化 去除基线
     """
-    print('data length: ' + str(len(wave)))
     if len(wave) %2 > 0:
         wave = wave[:-1]
     sym = pywt.Wavelet('sym6')  # 小波基
