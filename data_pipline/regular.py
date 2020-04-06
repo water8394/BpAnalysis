@@ -3,6 +3,7 @@ from plot import Plot
 from pre_process import *
 from pre_process import _scale
 
+
 # 主要是预处理的实现过程
 # 用到的函数是 commons/pro_process [预处理过程] &&  commons/wavelet [小波滤波]
 
@@ -12,10 +13,9 @@ def pre_process(k):
     df = remove_dc(df)  # 去除dc分量
     df = filter(df)  # 滤波
     df = scale(df)  # 放缩
-    df= mean_filter(df, mean_value=30)
+    df = mean_filter(df, mean_value=30)
     # 存储预处理后的文件
     sensor.resave_file(k, df, 'regular')
-
 
 
 if __name__ == '__main__':
@@ -38,8 +38,8 @@ if __name__ == '__main__':
         # df = filter(df)
         # df = scale(df)
         df.ir2 = _scale(df.ir2)
-        #df = mean_filter(df)
-        #df = reverse(df)
+        # df = mean_filter(df)
+        # df = reverse(df)
         ###################################################################
         # 结果数据
         fig2 = plt.subplot(212)
