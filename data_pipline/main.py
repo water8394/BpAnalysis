@@ -38,5 +38,5 @@ def main(k):
 
 
 if __name__ == '__main__':
-    number = 54
+    number = 76
     main(number)

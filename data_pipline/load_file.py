@@ -46,7 +46,11 @@ class SensorData:
     def load_peek_index(k, default='peak_index'):
         # 拿到峰值索引点
         path = SensorData._combine_path(k, default=default)
-        idx = pd.read_table(path, header=None, sep=',')
+        try:
+            idx = pd.read_table(path, header=None, sep=',')
+        except:
+            idx = pd.DataFrame(columns=['ir1', 'ir2'])
+        print(idx)
         if idx.shape[1] == 1:
             idx.columns = ['ir1']
         elif idx.shape[1] == 2:
@@ -153,6 +157,35 @@ class SensorData:
         df.fillna(0, inplace=True)
         return df, xgb.DMatrix(df), list(high), list(low)
 
+    @staticmethod
+    def load_all_metric(numbers):
+        sensor=SensorData()
+        record = sensor.record
+        metric_name = ['bf', 'bs', 'sd', 'df', 'sf', 'rr', 'asd', 'asf', 'ptt']
+        columns = ['bf', 'bs', 'sd', 'df', 'sf', 'rr', 'asd', 'asf', 'ptt', 'high', 'low']
+        df = pd.DataFrame(columns=columns)
+        for k in numbers:
+            metric = sensor.load_json_metric(k)
+            high, low = int(record[record['number'] == k]['high']), int(record[record['number'] == k]['low'])
+            l = []
+            for name in metric_name:
+                l.append(np.mean(metric[name]))
+            l.append(high)
+            l.append(low)
+            insert_row = dict(zip(columns, l))
+            df.loc[df.shape[0]] = insert_row
+        df['ptt'] = [abs(_) for _ in list(df['ptt'])]
+        high, low = df.loc[:, 'high'], df.loc[:, 'low']
+        all = df
+        df = df.drop(['high', 'low'], axis=1)
+        df.fillna(0, inplace=True)
+        return all, df, xgb.DMatrix(df), list(high), list(low)
+
+    @staticmethod
+    def load_patient_record():
+        path = '../scene/高压记录.xlsx'
+        df = pd.read_excel(path)
+        return df
 
 
 if __name__ == '__main__':
@@ -167,6 +200,7 @@ if __name__ == '__main__':
 
     # sensor.resave_file(100, data)
 
-    print(sensor.get_record_number())
+    #print(sensor.get_record_number())
 
-
+    df = sensor.load_patient_record()
+    print(df)

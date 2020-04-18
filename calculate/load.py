@@ -46,7 +46,12 @@ def create_table(name):
 
 
 def load(name='70', bp='high', ratio=0.5):
-    df = create_table(name)
+    if name == 'patient':
+        from data_pipline.patient import load_metric
+        all, k,m, h,l = load_metric()
+        df = all
+    else:
+        df = create_table(name)
     if name == '70':
         train_X, test_X, train_Y, test_Y = train_test_split(
             df[['ptt', 'vally_ptt', 'rr1', 'rr2', 'sum1', 'up1', 'down1', 'sum2', 'up2', 'down2']], df[bp],
