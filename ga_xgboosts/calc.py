@@ -34,28 +34,23 @@ if __name__ == '__main__':
     Plot.plot_diff(ph, rh, pl, rl)
     ph, rh = remove_max(ph, rh)
     pl, rl = remove_max(pl, rl)
-    Plot.bland_altman_plot(ph, rh)
+    Plot.bland_altman_plot(ph, rh, color='blue')
     Plot.bland_altman_plot(pl, rl)
 
-    # for key in keys:
-    #     for model in models:
-    #         ph, rh, pl, rl = load_metric(key)
-    #         #Plot.plot_diff(ph, rh, pl, rl)
-    #         #Plot.bland_altman_plot(ph, rh)
-    #         # plt.show()
-    #         ph = np.asarray(ph)
-    #         rh = np.asarray(rh)
-    #         pl = np.asarray(pl)
-    #         rl = np.asarray(rl)
-    #
-    #         diff = ph - rh  # Difference between data1 and data2
-    #         md = np.mean(diff)  # Mean of the difference
-    #         sd = np.std(diff, axis=0)  # Standard deviation of the difference
-    #         rmsd = rmse(ph, rh)
-    #         print(key+'/'+model+'/'+'high--->>>>>'+str(md) + ' ' + str(sd) + ' ' +str(rmsd))
-    #
-    #         diff = pl - rl  # Difference between data1 and data2
-    #         md = np.mean(diff)  # Mean of the difference
-    #         sd = np.std(diff, axis=0)  # Standard deviation of the difference
-    #         rmsd = rmse(pl, rl)
-    #         print(key+'/'+model+'/'+'low----->>>>>' + str(md) + ' ' + str(sd) + ' ' + str(rmsd))
+
+    ph = np.asarray(ph)
+    rh = np.asarray(rh)
+    pl = np.asarray(pl)
+    rl = np.asarray(rl)
+
+    diff = ph - rh  # Difference between data1 and data2
+    md = np.mean(diff)  # Mean of the difference
+    sd = np.std(diff, axis=0)  # Standard deviation of the difference
+    rmsd = rmse(ph, rh)
+    print('high--->>>>>'+str(md) + ' ' + str(sd) + ' ' +str(rmsd))
+
+    diff = pl - rl  # Difference between data1 and data2
+    md = np.mean(diff)  # Mean of the difference
+    sd = np.std(diff, axis=0)  # Standard deviation of the difference
+    rmsd = rmse(pl, rl)
+    print('low----->>>>>' + str(md) + ' ' + str(sd) + ' ' + str(rmsd))

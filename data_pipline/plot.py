@@ -16,7 +16,7 @@ class Plot:
 
     @staticmethod
     def get_colors():
-        return ['deeppink','dodgerblue','darkorange','limegreen']
+        return ['deeppink', 'dodgerblue', 'darkorange', 'limegreen']
 
     @staticmethod
     def init_plot():
@@ -182,7 +182,7 @@ class Plot:
         plt.show()
 
     @staticmethod
-    def bland_altman_plot(data1, data2):
+    def bland_altman_plot(data1, data2, color='deeppink'):
         # 绘制 ba图
         data1 = np.asarray(data1)
         data2 = np.asarray(data2)
@@ -193,7 +193,8 @@ class Plot:
 
         print('md:' + str(md))
         print('sd:' + str(sd))
-        plt.scatter(mean, diff, alpha=0.8, color='deeppink')
+
+        plt.scatter(mean, diff, alpha=0.8, color=color)
         plt.axhline(md, color='dodgerblue', linestyle='--', alpha=0.7)
         plt.axhline(md + 1.96 * sd, color='tomato', linestyle='--', alpha=0.7)
         plt.axhline(md - 1.96 * sd, color='tomato', linestyle='--', alpha=0.7)
@@ -224,9 +225,6 @@ class Plot:
         ax.set_xticks(x)
         plt.legend()
         plt.show()
-
-
-
 
 
 if __name__ == '__main__':
