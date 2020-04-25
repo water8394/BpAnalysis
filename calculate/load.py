@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from data_pipline import *
 from load_file import SensorData
 
+
 # 加载指标值
 # 70是代表老数据  新数据统一用24
 
@@ -39,7 +40,10 @@ def create_table(name):
             high, low = int(record[record['number'] == k]['high']), int(record[record['number'] == k]['low'])
             l = []
             for name in metric_name:
-                l.append(np.mean(metric[name]))
+                values = metric[name]
+                l.append(get_metric_value(values))
+            if sum(l) == 0:
+                continue
             l.append(high)
             l.append(low)
             insert_row = dict(zip(columns, l))
@@ -51,7 +55,7 @@ def create_table(name):
 def load(name='70', bp='high', ratio=0.5):
     if name == 'patient':
         from data_pipline.patient import load_metric
-        all, k,m, h,l = load_metric()
+        all, k, m, h, l = load_metric()
         df = all
     else:
         df = create_table(name)
@@ -96,13 +100,13 @@ def load_metric(key='70', model='ga_xgboost'):
     with open(file1, 'r') as f:
         lines = f.readlines()
         for line in lines:
-            p,r = line.split(',')
+            p, r = line.split(',')
             ph.append(int(p))
             rh.append(int(r))
-    with open(file2,'r') as f:
+    with open(file2, 'r') as f:
         lines = f.readlines()
         for line in lines:
-            p,r = line.split(',')
+            p, r = line.split(',')
             pl.append(int(p))
             rl.append(int(r))
 
@@ -119,5 +123,20 @@ def load_metric(key='70', model='ga_xgboost'):
     return ph, rh, pl, rl
 
 
+def get_metric_value(valeus):
+    l = len(valeus)
+    ret = 0.0
+    cnt = 0
+    for i in range(int(0.6 * l)):
+        if valeus[i] != 0:
+            ret += valeus[i]
+            cnt += 1
+    if cnt == 0:
+        return 0
+    else:
+        return ret / cnt
+
+
 if __name__ == '__main__':
-    load('run')
+    tb = create_table('patient')
+    print(tb)

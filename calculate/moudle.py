@@ -26,10 +26,10 @@ lr / svm / bp 等等各种不同的算法
 # key = '24'
 # bp = 'high'
 keys = ['patient']
-bps = ['high']
+bps = ['high', 'low']
 for key in keys:
     for bp in bps:
-        train_X, test_X, train_Y, test_Y = load(key, bp=bp, ratio=0.2)
+        train_X, test_X, train_Y, test_Y = load(key, bp=bp, ratio=0.5)
         # XGBoost
         xgboost_predictor = xgb.XGBRegressor(
             learning_rate=0.1,

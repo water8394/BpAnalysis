@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     # keys = ['24', '70']
     keys = ['patient']
-    bps = ['high']
+    bps = ['high', 'low']
     for key in keys:
         for bp in bps:
             base = '../model/'
@@ -34,5 +34,7 @@ if __name__ == '__main__':
             print(y)
 
             name = key + '_' + bp
-            dump_value(list(y), list(h), name)
-
+            if bp == 'high':
+                dump_value(list(y), list(h), name)
+            else:
+                dump_value(list(y), list(l), name)
