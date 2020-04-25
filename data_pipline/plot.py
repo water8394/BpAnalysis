@@ -198,7 +198,7 @@ class Plot:
         plt.axhline(md + 1.96 * sd, color='tomato', linestyle='--', alpha=0.7)
         plt.axhline(md - 1.96 * sd, color='tomato', linestyle='--', alpha=0.7)
 
-        #plt.show()
+        plt.show()
 
     @staticmethod
     def ba_plot(data1, data2, data3, data4):

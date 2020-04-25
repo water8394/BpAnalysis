@@ -26,8 +26,11 @@ def create_table(name):
         return df
     else:
         sensor = SensorData()
-        ids = sensor.get_record_number()
         record = sensor.record
+        if name == '24':
+            ids = sensor.get_record_number()
+        else:
+            ids = list(sensor.load_patined_idx())
         metric_name = ['bf', 'bs', 'sd', 'df', 'sf', 'rr', 'asd', 'asf', 'ptt']
         columns = ['bf', 'bs', 'sd', 'df', 'sf', 'rr', 'asd', 'asf', 'ptt', 'high', 'low']
         df = pd.DataFrame(columns=columns)
@@ -83,11 +86,14 @@ def dump_value(a, b, name):
 
 
 def load_metric(key='70', model='ga_xgboost'):
-    base = '../scene/result/' + model + '_'
+    if key == '':
+        base = '../scene/result/' + model
+    else:
+        base = '../scene/result/' + model + '_'
     file1 = base + key + '_high.txt'
     file2 = base + key + '_low.txt'
     ph, rh, pl, rl = [], [], [], []
-    with open(file1,'r') as f:
+    with open(file1, 'r') as f:
         lines = f.readlines()
         for line in lines:
             p,r = line.split(',')

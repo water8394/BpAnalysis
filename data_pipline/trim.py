@@ -16,15 +16,15 @@ def remove_part(data, r):
 if __name__ == '__main__':
     sensor = SensorData()
 
-    for k in range(70, 71, 1):
-        k = 73
-        re_save = 1  # 0: origin  / 1: trim
+    for k in range(77, 78, 1):
+        k = 87
+        re_save = 0 # 0: origin  / 1: trim
         d = sensor.load_by_number(k, default='data')
 
         print(d.ir1)
         if not re_save:
             Plot.show(d.ir1, d.ir2)
         else:
-            d2 = remove_part(d, [16000, 23000])
+            d2 = remove_part(d, [0, 10000])
             #Plot.show(d2.ir1, d2.ir2)
             sensor.resave_file(k, d2, default='data')

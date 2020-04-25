@@ -21,12 +21,17 @@ def rmse(predictions, targets):
 
 
 if __name__ == '__main__':
+    """
+    
+    绘制  趋势图 和  BA图
+    
+    """
 
-    keys = ['70', '24']
-    models = ['xgb']
+    keys = ['']
+    models = ['patient']
 
-    ph, rh, pl, rl = load_metric('24')
-    #Plot.plot_diff(ph, rh, pl, rl)
+    ph, rh, pl, rl = load_metric('', 'patient')
+    Plot.plot_diff(ph, rh, pl, rl)
     ph, rh = remove_max(ph, rh)
     pl, rl = remove_max(pl, rl)
     Plot.bland_altman_plot(ph, rh)

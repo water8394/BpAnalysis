@@ -187,6 +187,10 @@ class SensorData:
         df = pd.read_excel(path)
         return df
 
+    @staticmethod
+    def load_patined_idx():
+        record = SensorData.load_patient_record()
+        return record['number']
 
 if __name__ == '__main__':
     d = SensorData.load(path='../scene/data/2.txt')

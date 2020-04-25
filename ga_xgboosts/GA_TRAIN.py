@@ -55,7 +55,7 @@ class MyProblem(ea.Problem):  # 继承Problem父类
 
             # 训练模型
             predictor.fit(train_X, train_Y)
-            predictor.save_model('../model/patient_high')
+            predictor.save_model('../model/patient_h')
             # 预测结果
             y = predictor.predict(test_X)
             # 计算损失值
@@ -71,12 +71,15 @@ if __name__ == '__main__':
     problem = MyProblem()  # 生成问题对象
     # 加载数据
     key = 'patient'
-    bp = 'low'
+    bp = 'high'
     train_X, test_X, train_Y, test_Y = load(key, bp, ratio=0.7)
-
+    print(list(test_Y))
+    print(list(train_Y))
+    import time
+    time.sleep(3)
     """==================================种群设置==============================="""
     Encoding = 'RI'  # 编码方式
-    NIND = 100  # 种群规模
+    NIND = 50  # 种群规模
     Field = ea.crtfld(Encoding, problem.varTypes, problem.ranges, problem.borders)  # 创建区域描述器
     population = ea.Population(Encoding, Field, NIND)  # 实例化种群对象（此时种群还没被初始化，仅仅是完成种群对象的实例化）
     """================================算法参数设置============================="""

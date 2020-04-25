@@ -25,8 +25,8 @@ lr / svm / bp 等等各种不同的算法
 
 # key = '24'
 # bp = 'high'
-keys = ['70']
-bps = ['high', 'low']
+keys = ['patient']
+bps = ['high']
 for key in keys:
     for bp in bps:
         train_X, test_X, train_Y, test_Y = load(key, bp=bp, ratio=0.2)
@@ -44,29 +44,31 @@ for key in keys:
             seed=27)
 
         # 线性回归
-        liner_predictor = linear_model.LinearRegression()
+        #liner_predictor = linear_model.LinearRegression()
 
         # 支持向量机 liner 线性  poly 多项式  rbf 径向基
-        svr_predictor = SVR(kernel='poly', C=100, gamma=0.1, epsilon=.1)
+        #svr_predictor = SVR(kernel='poly', C=100, gamma=0.1, epsilon=.1)
 
-        base = '../model/norm_'
+        base = '../model/'
         print(key)
         print(bp)
         #train_X = train_X.fillna(0, inplace=True)
-        #xgboost_predictor.fit(train_X, train_Y)
+        print(list(train_X))
+        print(list(train_Y))
+        xgboost_predictor.fit(train_X, train_Y)
+        xgboost_predictor.save_model(base+key+'_'+bp)
 
         #print(train_X)
-        print(train_X)
-        liner_predictor.fit(train_X, train_Y)
-        print('liner finish')
+        #print(train_X)
+        #liner_predictor.fit(train_X, train_Y)
+        #print('liner finish')
         #svr_predictor.fit(train_X, train_Y)
         #print('svr finish')
 
         print('-------------')
-        #xgboost_predictor.save_model(base+'xgb_'+key+'_'+bp)
 
         import pickle
-        pickle.dump(liner_predictor, open(base+'liner_'+key+'_'+bp, 'wb'))
-        pickle.dump(svr_predictor, open(base+'svr_'+key+'_'+bp, 'wb'))
+        #pickle.dump(liner_predictor, open(base+'liner_'+key+'_'+bp, 'wb'))
+        #pickle.dump(svr_predictor, open(base+'svr_'+key+'_'+bp, 'wb'))
 
 
